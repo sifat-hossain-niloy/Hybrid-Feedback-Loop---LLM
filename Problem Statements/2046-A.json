@@ -1,0 +1,17 @@
+{
+    "statement": "There is a matrix consisting of\n2\nrows and\nn\ncolumns. The rows are numbered from\n1\nto\n2\nfrom top to bottom; the columns are numbered from\n1\nto\nn\nfrom left to right. Let's denote the cell on the intersection of the\ni\n-th row and the\nj\n-th column as\n(i,j)\n. Each cell contains an integer; initially, the integer in the cell\n(i,j)\nis\nai,j\n.\nYou can perform the following operation any number of times (possibly zero):\nchoose two columns and swap them (i. e. choose two integers\nx\nand\ny\nsuch that\n1≤x<y≤n\n, then swap\na1,x\nwith\na1,y\n, and then swap\na2,x\nwith\na2,y\n).\nAfter performing the operations, you have to choose a path from the cell\n(1,1)\nto the cell\n(2,n)\n. For every cell\n(i,j)\nin the path except for the last, the next cell should be either\n(i+1,j)\nor\n(i,j+1)\n. Obviously, the path cannot go outside the matrix.\nThe cost of the path is the sum of all integers in all\n(n+1)\ncells belonging to the path. You have to perform the operations and choose a path so that its cost is maximum possible.",
+    "input_specification": "Each test contains multiple test cases. The first line contains the number of test cases\nt\n(\n1≤t≤5000\n). The description of the test cases follows.\nEach test case consists of three lines:\nIt is guaranteed that the sum of\n𝑛\nover all test cases does not exceed\n5000\n.",
+    "output_specification": "For each test case, print one integer — the maximum cost of a path you can obtain.",
+    "sample_tests": [
+        {
+            "input": "3\n1\n-10\n5\n3\n1 2 3\n10 -5 -3\n4\n2 8 5 3\n1 10 3 4",
+            "output": "-5\n16\n29"
+        }
+    ],
+    "note": "Here are the explanations of the first three test cases of the example. The left matrix is the matrix given in the input, the right one is the state of the matrix after several column swaps (possibly zero). The optimal path is highlighted in green.",
+    "tags": [
+        "greedy",
+        "sortings"
+    ],
+    "rating": "1200"
+}

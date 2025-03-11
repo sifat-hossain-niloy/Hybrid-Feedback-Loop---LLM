@@ -1,0 +1,19 @@
+{
+    "statement": "You are given an array\n𝑎\nof length\n𝑛\nand\n𝑞\nqueries\n𝑙\n,\n𝑟\n.\nFor each query, find the maximum possible\n𝑚\n, such that all elements\n𝑎\n𝑙\n,\n𝑎\n𝑙+1\n, ...,\n𝑎\n𝑟\nare equal modulo\n𝑚\n. In other words,\n𝑎\n𝑙\nmod𝑚=\n𝑎\n𝑙+1\nmod𝑚=⋯=\n𝑎\n𝑟\nmod𝑚\n, where\n𝑎mod𝑏\n — is the remainder of division\n𝑎\nby\n𝑏\n. In particular, when\n𝑚\ncan be infinite, print\n0\n.",
+    "input_specification": "The first line contains a single integer\n𝑡\n(\n1≤𝑡≤\n10\n4\n) — the number of test cases.\nThe first line of each test case contains two integers\n𝑛\n,\n𝑞\n(\n1≤𝑛,𝑞≤2⋅\n10\n5\n) — the length of the array and the number of queries.\nThe second line of each test case contains\n𝑛\nintegers\n𝑎\n𝑖\n(\n1≤\n𝑎\n𝑖\n≤\n10\n9\n) — the elements of the array.\nIn the following\n𝑞\nlines of each test case, two integers\n𝑙\n,\n𝑟\nare provided (\n1≤𝑙≤𝑟≤𝑛\n) — the range of the query.\nIt is guaranteed that the sum of\n𝑛\nacross all test cases does not exceed\n2⋅\n10\n5\n, and the sum of\n𝑞\ndoes not exceed\n2⋅\n10\n5\n.",
+    "output_specification": "For each query, output the maximum value\n𝑚\ndescribed in the statement.",
+    "sample_tests": [
+        {
+            "input": "3\n5 5\n5 14 2 6 3\n4 5\n1 4\n2 4\n3 5\n1 1\n1 1\n7\n1 1\n3 2\n1 7 8\n2 3\n1 2",
+            "output": "3 1 4 1 0 \n0 \n1 6"
+        }
+    ],
+    "note": "In the first query of the first sample,\n6mod3=3mod3=0\n. It can be shown that for greater\n𝑚\n, the required condition will not be fulfilled.\nIn the third query of the first sample,\n14mod4=2mod4=6mod4=2\n. It can be shown that for greater\n𝑚\n, the required condition will not be fulfilled.",
+    "tags": [
+        "data structures",
+        "divide and conquer",
+        "math",
+        "number theory"
+    ],
+    "rating": "1700"
+}

@@ -1,0 +1,20 @@
+{
+    "statement": "A batch of Christmas trees has arrived at the largest store in Berland.\n𝑛\ncustomers have already come to the store, wanting to buy them.\nBefore the sales begin, the store needs to determine the price for one tree (the price is the same for all customers). To do this, the store has some information about each customer.\nFor the\n𝑖\n-th customer, two integers\n𝑎\n𝑖\nand\n𝑏\n𝑖\nare known, which define their behavior:\nif the price of the product is at most\n𝑎\n𝑖\n, the customer will buy a tree and leave a positive review;\notherwise, if the price of the product is at most\n𝑏\n𝑖\n, the customer will buy a tree but leave a negative review;\notherwise, the customer will not buy a tree at all.\nYour task is to calculate the maximum possible earnings for the store, given that it can receive no more than\n𝑘\nnegative reviews.",
+    "input_specification": "The first line contains a single integer\n𝑡\n(\n1≤𝑡≤\n10\n4\n) — the number of test cases.\nThe first line of each test case contains two integers\n𝑛\nand\n𝑘\n(\n1≤𝑛≤2⋅\n10\n5\n;\n0≤𝑘≤𝑛\n).\nThe second line contains\n𝑛\nintegers\n𝑎\n1\n,\n𝑎\n2\n,…,\n𝑎\n𝑛\n(\n1≤\n𝑎\n𝑖\n≤2⋅\n10\n9\n).\nThe third line contains\n𝑛\nintegers\n𝑏\n1\n,\n𝑏\n2\n,…,\n𝑏\n𝑛\n(\n1≤\n𝑏\n𝑖\n≤2⋅\n10\n9\n;\n𝑎\n𝑖\n<\n𝑏\n𝑖\n).\nAdditional constraint on the input: the sum of\n𝑛\nover all test cases does not exceed\n2⋅\n10\n5\n.",
+    "output_specification": "For each test case, print a single integer — the maximum possible earnings for the store, given that it can receive no more than\n𝑘\nnegative reviews.",
+    "sample_tests": [
+        {
+            "input": "5\n2 0\n2 1\n3 4\n1 1\n2\n5\n3 3\n1 5 2\n3 6 4\n4 3\n2 3 2 8\n3 7 3 9\n3 1\n2 9 5\n12 14 9",
+            "output": "2\n5\n9\n14\n15"
+        }
+    ],
+    "note": "Consider the example from the statement:",
+    "tags": [
+        "binary search",
+        "brute force",
+        "data structures",
+        "greedy",
+        "sortings"
+    ],
+    "rating": "1600"
+}

@@ -1,0 +1,19 @@
+{
+    "statement": "You are given two simple undirected graphs\n𝐹\nand\n𝐺\nwith\n𝑛\nvertices.\n𝐹\nhas\n𝑚\n1\nedges while\n𝐺\nhas\n𝑚\n2\nedges. You may perform one of the following two types of operations any number of times:\nSelect two integers\n𝑢\nand\n𝑣\n(\n1≤𝑢,𝑣≤𝑛\n) such that there is an edge between\n𝑢\nand\n𝑣\nin\n𝐹\n. Then, remove that edge from\n𝐹\n.\nSelect two integers\n𝑢\nand\n𝑣\n(\n1≤𝑢,𝑣≤𝑛\n) such that there is no edge between\n𝑢\nand\n𝑣\nin\n𝐹\n. Then, add an edge between\n𝑢\nand\n𝑣\nin\n𝐹\n.\nDetermine the minimum number of operations required such that for all integers\n𝑢\nand\n𝑣\n(\n1≤𝑢,𝑣≤𝑛\n), there is a path from\n𝑢\nto\n𝑣\nin\n𝐹\nif and only if there is a path from\n𝑢\nto\n𝑣\nin\n𝐺\n.",
+    "input_specification": "The first line contains an integer\n𝑡\n(\n1≤𝑡≤\n10\n4\n) — the number of independent test cases.\nThe first line of each test case contains three integers\n𝑛\n,\n𝑚\n1\n, and\n𝑚\n2\n(\n1≤𝑛≤2⋅\n10\n5\n,\n0≤\n𝑚\n1\n,\n𝑚\n2\n≤2⋅\n10\n5\n) — the number of vertices, the number of edges in\n𝐹\n, and the number of edges in\n𝐺\n.\nThe following\n𝑚\n1\nlines each contain two integers\n𝑢\nand\n𝑣\n(\n1≤𝑢,𝑣≤𝑛\n) — there is an edge between\n𝑢\nand\n𝑣\nin\n𝐹\n. It is guaranteed that there are no repeated edges or self loops.\nThe following\n𝑚\n2\nlines each contain two integers\n𝑢\nand\n𝑣\n(\n1≤𝑢,𝑣≤𝑛\n) — there is an edge between\n𝑢\nand\n𝑣\nin\n𝐺\n. It is guaranteed that there are no repeated edges or self loops.\nIt is guaranteed that the sum of\n𝑛\n, the sum of\n𝑚\n1\n, and the sum of\n𝑚\n2\nover all test cases do not exceed\n2⋅\n10\n5\n.",
+    "output_specification": "For each test case, output a single integer denoting the minimum operations required on a new line.",
+    "sample_tests": [
+        {
+            "input": "5\n3 2 1\n1 2\n2 3\n1 3\n2 1 1\n1 2\n1 2\n3 2 0\n3 2\n1 2\n1 0 0\n3 3 1\n1 2\n1 3\n2 3\n1 2",
+            "output": "3\n0\n2\n0\n2"
+        }
+    ],
+    "note": "In the first test case you can perform the following three operations:\nIn the second test case,\n𝐹\nand\n𝐺\nalready fulfill the condition in the beginning.\nIn the fifth test case, the edges from\n1\nto\n3\nand from\n2\nto\n3\nmust both be removed.",
+    "tags": [
+        "dfs and similar",
+        "dsu",
+        "graphs",
+        "greedy"
+    ],
+    "rating": "1500"
+}

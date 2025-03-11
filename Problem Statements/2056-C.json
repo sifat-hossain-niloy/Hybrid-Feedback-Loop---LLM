@@ -1,0 +1,18 @@
+{
+    "statement": "For an integer sequence\n𝑎=[\n𝑎\n1\n,\n𝑎\n2\n,…,\n𝑎\n𝑛\n]\n, we define\n𝑓(𝑎)\nas the length of the longest subsequence\n∗\nof\n𝑎\nthat is a palindrome\n†\n.\nLet\n𝑔(𝑎)\nrepresent the number of subsequences of length\n𝑓(𝑎)\nthat are palindromes. In other words,\n𝑔(𝑎)\ncounts the number of palindromic subsequences in\n𝑎\nthat have the maximum length.\nGiven an integer\n𝑛\n, your task is to find any sequence\n𝑎\nof\n𝑛\nintegers that satisfies the following conditions:\n1≤\n𝑎\n𝑖\n≤𝑛\nfor all\n1≤𝑖≤𝑛\n.\n𝑔(𝑎)>𝑛\nIt can be proven that such a sequence always exists under the given constraints.\n∗\nA sequence\n𝑥\nis a subsequence of a sequence\n𝑦\nif\n𝑥\ncan be obtained from\n𝑦\nby the deletion of several (possibly, zero or all) element from arbitrary positions.\n†\nA palindrome is a sequence that reads the same from left to right as from right to left. For example,\n[1,2,1,3,1,2,1]\n,\n[5,5,5,5]\n, and\n[4,3,3,4]\nare palindromes, while\n[1,2]\nand\n[2,3,3,3,3]\nare not.",
+    "input_specification": "Each test contains multiple test cases. The first line contains the number of test cases\n𝑡\n(\n1≤𝑡≤100\n). The description of the test cases follows.\nThe first line of each test case contains a single integer\n𝑛\n(\n6≤𝑛≤100\n) — the length of the sequence.\nNote that there are no constraints on the sum of\n𝑛\nover all test cases.",
+    "output_specification": "For each test case, output\n𝑛\nintegers\n𝑎\n1\n,\n𝑎\n2\n,…,\n𝑎\n𝑛\n, representing an array that satisfies the conditions.\nIf there are multiple solutions, you may output any of them.",
+    "sample_tests": [
+        {
+            "input": "3\n6\n9\n15",
+            "output": "1 1 2 3 1 2\n7 3 3 7 5 3 7 7 3\n15 8 8 8 15 5 8 1 15 5 8 15 15 15 8"
+        }
+    ],
+    "note": "In the first example, one possible solution is\n𝑎=[1,1,2,3,1,2]\n. In this case,\n𝑓(𝑎)=3\nas the longest palindromic subsequence has length\n3\n. There are\n7\nways to choose a subsequence of length\n3\nthat is a palindrome, as shown below:\nTherefore,\n𝑔(𝑎)=7\n, which is greater than\n𝑛=6\n. Hence,\n𝑎=[1,1,2,3,1,2]\nis a valid solution.\nIn the second example, one possible solution is\n𝑎=[7,3,3,7,5,3,7,7,3]\n. In this case,\n𝑓(𝑎)=5\n. There are\n24\nways to choose a subsequence of length\n5\nthat is a palindrome. Some examples are\n[\n𝑎\n2\n,\n𝑎\n4\n,\n𝑎\n5\n,\n𝑎\n8\n,\n𝑎\n9\n]=[3,7,5,7,3]\nand\n[\n𝑎\n1\n,\n𝑎\n4\n,\n𝑎\n6\n,\n𝑎\n7\n,\n𝑎\n8\n]=[7,7,3,7,7]\n. Therefore,\n𝑔(𝑎)=24\n, which is greater than\n𝑛=9\n. Hence,\n𝑎=[7,3,3,7,5,3,7,7,3]\nis a valid solution.\nIn the third example,\n𝑓(𝑎)=7\nand\n𝑔(𝑎)=190\n, which is greater than\n𝑛=15\n.",
+    "tags": [
+        "brute force",
+        "constructive algorithms",
+        "math"
+    ],
+    "rating": "1200"
+}

@@ -1,0 +1,19 @@
+{
+    "statement": "You are given a string\n𝑠\n, consisting of digits from\n0\nto\n9\n. In one operation, you can pick any digit in this string, except for\n0\nor the leftmost digit, decrease it by\n1\n, and then swap it with the digit left to the picked.\nFor example, in one operation from the string\n1023\n, you can get\n1103\nor\n1022\n.\nFind the lexicographically maximum string you can obtain after any number of operations.",
+    "input_specification": "The first line of the input consists of an integer\n𝑡\n(\n1≤𝑡≤\n10\n4\n)  — the number of test cases.\nEach test case consists of a single line consisting of a digital string\n𝑠\n(\n1≤|𝑠|≤2⋅\n10\n5\n), where\n|𝑠|\ndenotes the length of\n𝑠\n. The string does not contain leading zeroes.\nIt is guaranteed that the sum of\n|𝑠|\nof all test cases doesn't exceed\n2⋅\n10\n5\n.",
+    "output_specification": "For each test case, print the answer on a separate line.",
+    "sample_tests": [
+        {
+            "input": "6\n19\n1709\n11555\n51476\n9876543210\n5891917899",
+            "output": "81\n6710\n33311\n55431\n9876543210\n7875567711"
+        }
+    ],
+    "note": "In the first example, the following sequence of operations is suitable:\n19→81\n.\nIn the second example, the following sequence of operations is suitable:\n1709→1780→6180→6710\n.\nIn the fourth example, the following sequence of operations is suitable:\n51476→53176→53616→53651→55351→55431\n.",
+    "tags": [
+        "brute force",
+        "greedy",
+        "math",
+        "strings"
+    ],
+    "rating": "1300"
+}

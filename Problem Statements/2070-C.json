@@ -1,0 +1,17 @@
+{
+    "statement": "You are given a strip, consisting of\n𝑛\ncells, all cells are initially colored red.\nIn one operation, you can choose a segment of consecutive cells and paint them blue. Before painting, the chosen cells can be either red or blue. Note that it is not possible to paint them red. You are allowed to perform at most\n𝑘\noperations (possibly zero).\nFor each cell, the desired color after all operations is specified: red or blue.\nIt is clear that it is not always possible to satisfy all requirements within\n𝑘\noperations. Therefore, for each cell, a penalty is also specified, which is applied if the cell ends up the wrong color after all operations. For the\n𝑖\n-th cell, the penalty is equal to\n𝑎\n𝑖\n.\nThe penalty of the final painting is calculated as the maximum penalty among all cells that are painted the wrong color. If there are no such cells, the painting penalty is equal to\n0\n.\nWhat is the minimum penalty of the final painting that can be achieved?",
+    "input_specification": "The first line contains a single integer\n𝑡\n(\n1≤𝑡≤\n10\n4\n) — the number of test cases.\nThe first line of each test case contains two integers\n𝑛\nand\n𝑘\n(\n1≤𝑛≤3⋅\n10\n5\n;\n0≤𝑘≤𝑛\n) — the length of the strip and the maximum number of operations.\nThe second line contains a string\n𝑠\n, consisting of\n𝑛\ncharacters 'R' and/or 'B'. 'R' means that the cell should be painted red. 'B' means that the cell should be painted blue.\nThe third line contains\n𝑛\nintegers\n𝑎\n1\n,\n𝑎\n2\n,…,\n𝑎\n𝑛\n(\n1≤\n𝑎\n𝑖\n≤\n10\n9\n) — the penalty for each cell.\nThe sum of\n𝑛\nover all test cases does not exceed\n3⋅\n10\n5\n.",
+    "output_specification": "For each test case, print a single integer — the minimum penalty of the final painting.",
+    "sample_tests": [
+        {
+            "input": "5\n4 1\nBRBR\n9 3 5 4\n4 1\nBRBR\n9 5 3 4\n4 2\nBRBR\n9 3 5 4\n10 2\nBRBRBBRRBR\n5 1 2 4 5 3 6 1 5 4\n5 5\nRRRRR\n5 3 1 2 4",
+            "output": "3\n3\n0\n4\n0"
+        }
+    ],
+    "note": "In the first test case, you can paint the cells from\n1\nto\n3\n. The painting will be BBBR. So, only cell\n2\nis painted the wrong color. Therefore, the penalty for it is the final penalty and equals\n3\n.\nIn the second test case, the painting BBBR will now result in a penalty of\n5\n. However, if you paint the cells from\n1\nto\n1\n, resulting in BRRR, then only cell\n3\nis painted the wrong color. The final penalty is\n3\n.\nIn the third test case, you can paint the cells from\n1\nto\n1\nand from\n3\nto\n3\n. Then all cells will be the correct color, the penalty equals\n0\n.",
+    "tags": [
+        "binary search",
+        "greedy"
+    ],
+    "rating": "1500"
+}

@@ -1,0 +1,17 @@
+{
+    "statement": "Let's denote the score of an array\n𝑏\nwith\n𝑘\nelements as\n∑\n𝑘\n𝑖=1\n(\n∑\n𝑖\n𝑗=1\n𝑏\n𝑗\n)\n. In other words, let\n𝑆\n𝑖\ndenote the sum of the first\n𝑖\nelements of\n𝑏\n. Then, the score can be denoted as\n𝑆\n1\n+\n𝑆\n2\n+…+\n𝑆\n𝑘\n.\nSkibidus is given\n𝑛\narrays\n𝑎\n1\n,\n𝑎\n2\n,…,\n𝑎\n𝑛\n, each of which contains\n𝑚\nelements. Being the sigma that he is, he would like to concatenate them in any order to form a single array containing\n𝑛⋅𝑚\nelements. Please find the maximum possible score Skibidus can achieve with his concatenated array!\nFormally, among all possible permutations\n∗\n𝑝\nof length\n𝑛\n, output the maximum score of\n𝑎\n𝑝\n1\n+\n𝑎\n𝑝\n2\n+⋯+\n𝑎\n𝑝\n𝑛\n, where\n+\nrepresents concatenation\n†\n.\n∗\nA permutation of length\n𝑛\ncontains all integers from\n1\nto\n𝑛\nexactly once.\n†\nThe concatenation of two arrays\n𝑐\nand\n𝑑\nwith lengths\n𝑒\nand\n𝑓\nrespectively (i.e.\n𝑐+𝑑\n) is\n𝑐\n1\n,\n𝑐\n2\n,…,\n𝑐\n𝑒\n,\n𝑑\n1\n,\n𝑑\n2\n,…\n𝑑\n𝑓\n.",
+    "input_specification": "The first line contains an integer\n𝑡\n(\n1≤𝑡≤\n10\n4\n) — the number of test cases.\nThe first line of each test case contains two integers\n𝑛\nand\n𝑚\n(\n1≤𝑛⋅𝑚≤2⋅\n10\n5\n) — the number of arrays and the length of each array.\nThe\n𝑖\n'th of the next\n𝑛\nlines contains\n𝑚\nintegers\n𝑎\n𝑖,1\n,\n𝑎\n𝑖,2\n,…,\n𝑎\n𝑖,𝑚\n(\n1≤\n𝑎\n𝑖,𝑗\n≤\n10\n6\n) — the elements of the\n𝑖\n'th array.\nIt is guaranteed that the sum of\n𝑛⋅𝑚\nover all test cases does not exceed\n2⋅\n10\n5\n.",
+    "output_specification": "For each test case, output the maximum score among all possible permutations\n𝑝\non a new line.",
+    "sample_tests": [
+        {
+            "input": "3\n2 2\n4 4\n6 1\n3 4\n2 2 2 2\n3 2 1 2\n4 1 2 1\n2 3\n3 4 5\n1 1 9",
+            "output": "41\n162\n72"
+        }
+    ],
+    "note": "For the first test case, there are two possibilities for\n𝑝\n:\nThe maximum possible score is\n41\n.\nIn the second test case, one optimal arrangement of the final concatenated array is\n[4,1,2,1,2,2,2,2,3,2,1,2]\n. We can calculate that the score is\n162\n.",
+    "tags": [
+        "greedy",
+        "sortings"
+    ],
+    "rating": "1200"
+}

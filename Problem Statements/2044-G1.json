@@ -1,0 +1,20 @@
+{
+    "statement": "This is the easy version of the problem. The key difference between the two versions is highlighted in bold.\nA group of\nn\nspiders has come together to exchange plushies. Initially, each spider has\n1\nplushie. Every year, if spider\ni\nhas at least one plushie, he will give exactly one plushie to spider\nri\n. Otherwise, he will do nothing. Note that all plushie transfers happen at the same time. In this version, if any spider has more than\n1\nplushie at any point in time, they will throw all but\n1\naway.\nThe process is stable in the current year if each spider has the same number of plushies (before the current year's exchange) as he did the previous year (before the previous year's exchange). Note that year\n1\ncan never be stable.\nFind the first year in which the process becomes stable.",
+    "input_specification": "The first line contains an integer\nt\n(\n1≤t≤104\n) — the number of test cases.\nThe first line of each test case contains an integer\nn\n(\n2≤n≤2⋅105\n) — the number of spiders.\nThe following line contains\nn\nintegers\nr1,r2,…,rn\n(\n1≤ri≤n,ri≠i\n) — the recipient of the plushie of each spider.\nIt is guaranteed that the sum of\n𝑛\nover all test cases does not exceed\n2⋅\n10\n5\n.",
+    "output_specification": "For each test case, output an integer on a new line, the first year in which the process becomes stable.",
+    "sample_tests": [
+        {
+            "input": "5\n2\n2 1\n5\n2 3 4 5 1\n5\n2 1 4 2 3\n5\n4 1 1 5 4\n10\n4 3 9 1 6 7 9 10 10 3",
+            "output": "2\n2\n5\n4\n5"
+        }
+    ],
+    "note": "For the second test case:\nFor the third test case:",
+    "tags": [
+        "dfs and similar",
+        "graph matchings",
+        "graphs",
+        "implementation",
+        "trees"
+    ],
+    "rating": "1700"
+}

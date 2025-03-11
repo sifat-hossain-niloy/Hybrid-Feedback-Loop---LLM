@@ -1,0 +1,18 @@
+{
+    "statement": "Akito got tired of being a simple locksmith at a bank, so he decided to enroll in the Magical Academy and become the best wizard in the world! However, to enroll, he needed to solve a single problem on the exam, which the ambitious hero could not manage.\nIn the problem, he was given an array\na\nof length\nn\n. He needed to minimize the number of inversions\n∗\nin the array after applying the spell exactly once. The spell was simple; to apply it, Akito had to choose two numbers\nl\nand\nr\nsuch that\n1≤l≤r≤n\nand perform a cyclic shift of the subarray from\nl\nto\nr\none position to the left.\nMore formally, Akito selects the subarray\n[l,r]\nand modifies the array as follows:\nFrom the original array\n[a1,a2,…,al−1,al,al+1,…,ar−1,ar,ar+1,…,an−1,an]\n, he obtains the array\n[a1,a2,…,al−1,al+1,al+2,…,ar−1,ar,al,ar+1,…,an−1,an]\n.\nAkito is eager to start his studies, but he still hasn't passed the exam. Help him enroll and solve the problem!\n∗\nAn inversion in an array\nb\nof length\nm\nis defined as a pair of indices\n(i,j)\nsuch that\n1≤i<j≤m\nand\nbi>bj\n. For example, in the array\nb=[3,1,4,1,5]\n, the inversions are the pairs of indices\n(1,2)\n,\n(1,4)\n,\n(3,4)\n.",
+    "input_specification": "The first line of input contains a number\nt\n(\n1≤t≤104\n) — the number of test cases.\nIn the first line of each test case, there is a number\nn\n(\n1≤n≤2000\n) — the length of the array\na\n.\nIn the second line of each test case, there are\nn\nnumbers\nai\n(\n1≤ai≤2000\n) — the elements of the array\na\n.\nIt is guaranteed that the sum of\nn2\nacross all test cases does not exceed\n4⋅106\n.",
+    "output_specification": "For each test case, output two numbers\nl\nand\nr\n(\n1≤l≤r≤n\n) — the boundaries of the subarray that should be chosen so that after applying the spell, the number of inversions in the array is minimized.\nIf there are multiple suitable pairs of boundaries, you may output any of them.",
+    "sample_tests": [
+        {
+            "input": "9\n7\n1 4 3 2 5 3 3\n6\n1 4 3 2 5 3\n8\n7 6 5 8 4 3 2 1\n10\n1 1 1 5 1 1 5 6 7 8\n2\n1337 69\n4\n2 1 2 1\n3\n998 244 353\n3\n1 2 1\n9\n1 1 2 3 5 8 13 21 34",
+            "output": "2 7\n2 4\n1 8\n4 6\n1 2\n1 4\n1 3\n2 3\n5 5"
+        }
+    ],
+    "note": "In the first example, the array\n[1,4,3,2,5,3,3]\nwill turn into the array\n[1,3,2,5,3,3,4]\n. The inversions in it are\n(2,3)\n,\n(4,5)\n,\n(4,6)\nand\n(4,7)\n. It can be shown that it is not possible to achieve fewer than\n4\ninversions.\nIn the second example, the array\n[1,4,3,2,5,3]\nwill turn into\n[1,3,2,4,5,3]\n. The inversions in it are\n(2,3)\n,\n(4,6)\n, and\n(5,6)\n. The pair\nl=2\nand\nr=6\nalso works, then the array will turn into\n[1,3,2,5,3,4]\n, which also has\n3\ninversions —\n(2,3)\n,\n(4,5)\n, and\n(4,6)\n. It can be shown that it is not possible to achieve fewer than\n3\ninversions.\nIn the fourth example, choosing\n𝑙=4\nand\n𝑟=6\ntransforms the array into\n[1,1,1,1,1,5,5,6,7,8]\n. It is sorted, and therefore, there are no inversions.\nIn the last example, the array is initially sorted, so any operation on a segment of length at least\n2\nwill only increase the number of inversions.",
+    "tags": [
+        "brute force",
+        "greedy",
+        "implementation"
+    ],
+    "rating": "1300"
+}

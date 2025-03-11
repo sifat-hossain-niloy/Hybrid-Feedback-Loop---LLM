@@ -1,0 +1,17 @@
+{
+    "statement": "This is the hard version of the problem. In this version,\n𝑚≤2⋅\n10\n5\n.\nSkibidus has obtained two arrays\n𝑎\nand\n𝑏\n, containing\n𝑛\nand\n𝑚\nelements respectively. For each integer\n𝑖\nfrom\n1\nto\n𝑛\n, he is allowed to perform the operation at most once:\nChoose an integer\n𝑗\nsuch that\n1≤𝑗≤𝑚\n. Set\n𝑎\n𝑖\n:=\n𝑏\n𝑗\n−\n𝑎\n𝑖\n. Note that\n𝑎\n𝑖\nmay become non-positive as a result of this operation.\nSkibidus needs your help determining whether he can sort\n𝑎\nin non-decreasing order\n∗\nby performing the above operation some number of times.\n∗\n𝑎\nis sorted in non-decreasing order if\n𝑎\n1\n≤\n𝑎\n2\n≤…≤\n𝑎\n𝑛\n.",
+    "input_specification": "The first line contains an integer\n𝑡\n(\n1≤𝑡≤\n10\n4\n) — the number of test cases.\nThe first line of each test case contains two integers\n𝑛\nand\n𝑚\n(\n1≤𝑛≤2⋅\n10\n5\n,\n1≤𝑚≤2⋅\n10\n5\n).\nThe following line of each test case contains\n𝑛\nintegers\n𝑎\n1\n,\n𝑎\n2\n,…,\n𝑎\n𝑛\n(\n1≤\n𝑎\n𝑖\n≤\n10\n9\n).\nThe following line of each test case contains\n𝑚\nintegers\n𝑏\n1\n,\n𝑏\n2\n,…,\n𝑏\n𝑚\n(\n1≤\n𝑏\n𝑖\n≤\n10\n9\n).\nIt is guaranteed that the sum of\n𝑛\nand the sum of\n𝑚\nover all test cases does not exceed\n2⋅\n10\n5\n.",
+    "output_specification": "For each test case, if it is possible to sort\n𝑎\nin non-decreasing order, print \"YES\" on a new line. Otherwise, print \"NO\" on a new line.\nYou can output the answer in any case. For example, the strings \"yEs\", \"yes\", and \"Yes\" will also be recognized as positive responses.",
+    "sample_tests": [
+        {
+            "input": "5\n1 3\n5\n9 1 1000000000\n3 2\n1 4 3\n3 4\n4 3\n2 4 6 5\n6 1 8\n5 2\n6 4 5 4 5\n4 1000\n3 1\n9 8 7\n8",
+            "output": "YES\nNO\nYES\nNO\nYES"
+        }
+    ],
+    "note": "In the first test case,\n[5]\nis already sorted.\nIn the second test case, it can be shown that it is impossible.\nIn the third test case, we can set\n𝑎\n2\n:=\n𝑏\n1\n−\n𝑎\n2\n=6−4=2\nand\n𝑎\n3\n:=\n𝑏\n3\n−\n𝑎\n3\n=8−6=2\n. The sequence\n[2,2,2,5]\nis in nondecreasing order.\nIn the last case, we can apply operations on each index. The sequence becomes\n[−1,0,1]\n, which is in nondecreasing order.",
+    "tags": [
+        "binary search",
+        "greedy"
+    ],
+    "rating": "1300"
+}

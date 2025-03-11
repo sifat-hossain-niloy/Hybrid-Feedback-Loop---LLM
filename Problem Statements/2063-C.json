@@ -1,0 +1,23 @@
+{
+    "statement": "Recently, Little John got a tree from his aunt to decorate his house. But as it seems, just one tree is not enough to decorate the entire house. Little John has an idea. Maybe he can remove a few vertices from the tree. That will turn it into more trees! Right?\nYou are given a tree\n∗\nof\nn\nvertices. You must perform the following operation exactly twice.\nSelect a vertex\nv\n;\nRemove all edges incident to\nv\n, and also the vertex\nv\n.\nPlease find the maximum number of connected components after performing the operation exactly twice.\nTwo vertices\nx\nand\ny\nare in the same connected component if and only if there exists a path from\nx\nto\ny\n. For clarity, note that the graph with\n0\nvertices has\n0\nconnected components by definition.\n†\n∗\nA tree is a connected graph without cycles.\n†\nBut is such a graph connected?",
+    "input_specification": "Each test contains multiple test cases. The first line contains the number of test cases\n𝑡\n(\n1≤𝑡≤\n10\n4\n). The description of the test cases follows.\nThe first line of each test case contains a single integer\n𝑛\n(\n2≤𝑛≤2⋅\n10\n5\n).\nEach of the next\n𝑛−1\nlines contains two integers\n𝑢\n𝑖\nand\n𝑣\n𝑖\n, denoting the two vertices connected by an edge (\n1≤\n𝑢\n𝑖\n,\n𝑣\n𝑖\n≤𝑛\n,\n𝑢\n𝑖\n≠\n𝑣\n𝑖\n). It is guaranteed that the given edges form a tree.\nIt is guaranteed that the sum of\n𝑛\nover all test cases does not exceed\n2⋅\n10\n5\n.",
+    "output_specification": "For each test case, output the maximum number of connected components on a separate line.",
+    "sample_tests": [
+        {
+            "input": "3\n2\n1 2\n4\n1 2\n2 3\n2 4\n7\n1 2\n1 3\n2 4\n4 5\n5 6\n5 7",
+            "output": "0\n2\n4"
+        }
+    ],
+    "note": "On the first test case, removing a vertex twice will make the graph empty. By definition, the number of connected components in the graph with\n0\nvertices is\n0\n. Therefore, the answer is\n0\n.\nOn the second test case, removing two vertices\n1\nand\n2\nleaves\n2\nconnected components. As it is impossible to make\n3\nconnected components with\n2\nvertices, the answer is\n2\n.\nOn the third test case, removing two vertices\n1\nand\n5\nleaves\n4\nconnected components, which are\n{2,4}\n,\n{3}\n,\n{6}\n, and\n{7}\n. It can be shown that it is impossible to make\n5\nconnected components. Therefore, the answer is\n4\n.",
+    "tags": [
+        "brute force",
+        "data structures",
+        "dfs and similar",
+        "dp",
+        "graphs",
+        "greedy",
+        "sortings",
+        "trees"
+    ],
+    "rating": "1600"
+}

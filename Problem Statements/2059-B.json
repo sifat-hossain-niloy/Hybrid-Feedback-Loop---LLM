@@ -1,0 +1,19 @@
+{
+    "statement": "You are given an array\na\nof length\nn\nand an even integer\nk\n(\n2≤k≤n\n). You need to split the array\na\ninto exactly\nk\nnon-empty subarrays\n†\nsuch that each element of the array\na\nbelongs to exactly one subarray.\nNext, all subarrays with even indices (second, fourth,\n…\n,\nk\n-th) are concatenated into a single array\nb\n. After that,\n0\nis added to the end of the array\nb\n.\nThe cost of the array\nb\nis defined as the minimum index\ni\nsuch that\nbi≠i\n. For example, the cost of the array\nb=[1,2,4,5,0]\nis\n3\n, since\nb1=1\n,\nb2=2\n, and\nb3≠3\n. Determine the minimum cost of the array\nb\nthat can be obtained with an optimal partitioning of the array\na\ninto subarrays.\n†\nAn array\nx\nis a subarray of an array\ny\nif\nx\ncan be obtained from\ny\nby the deletion of several (possibly, zero or all) elements from the beginning and several (possibly, zero or all) elements from the end.",
+    "input_specification": "Each test consists of multiple test cases. The first line contains a single integer\n𝑡\n(\n1≤𝑡≤\n10\n4\n) — the number of test cases. The description of the test cases follows.\nThe first line of each test case contains two integers\n𝑛\nand\n𝑘\n(\n2≤𝑘≤𝑛≤2⋅\n10\n5\n,\n𝑘\nis even) — the length of the array\n𝑎\nand the number of subarrays.\nThe second line of each test case contains\n𝑛\nintegers\n𝑎\n1\n,\n𝑎\n2\n,…,\n𝑎\n𝑛\n(\n1≤\n𝑎\n𝑖\n≤\n10\n9\n) — the elements of the array\n𝑎\n.\nIt is guaranteed that the sum of\n𝑛\nover all test cases does not exceed\n2⋅\n10\n5\n.",
+    "output_specification": "For each test case, output a single integer — the minimum cost of the array\n𝑏\nthat can be obtained.",
+    "sample_tests": [
+        {
+            "input": "4\n3 2\n1 1 1\n8 8\n1 1 2 2 3 3 4 4\n5 4\n1 1 1 2 2\n5 4\n1 1 1000000000 2 2",
+            "output": "2\n5\n2\n1"
+        }
+    ],
+    "note": "In the first test case, there are only two possible partitionings:\n[[1],[1,1]]\nand\n[[1,1],[1]]\n. In either case,\n𝑏\n1\n=1\n, and\n𝑏\n2\n≠2\n, so the cost is\n2\n.\nIn the second test case, there is only one possible partitioning, where\n𝑏=[1,2,3,4,0]\n, so the cost is\n5\n(\n𝑏\n5\n=0≠5\n).\nIn the third test case, the following partitioning works:\n[[1],[1,1],[2],[2]]\n. Then\n𝑏=[1,1,2,0]\n, and the cost is\n2\n.",
+    "tags": [
+        "brute force",
+        "constructive algorithms",
+        "greedy",
+        "math"
+    ],
+    "rating": "1300"
+}

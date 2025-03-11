@@ -1,0 +1,24 @@
+{
+    "statement": "Alice's friend is a big fan of the Adrenaline Rush racing competition and always strives to attend every race. However, this time, Alice is the one watching the race. To ensure her friend does not miss any important details, Alice decides to take notes on everything that happens on the track.\nThe first thing Alice notices before the race begins is the numbering of the cars. All the cars line up in front of the starting line in a specific order. The car closest to the line is numbered\n1\n, the second car is numbered\n2\n, and so on, up to the last car, which is numbered\n𝑛\n. How convenient! — Alice thought.\nThe race begins with the countdown: \"Three! Two! One! Go!\". Alice observes that the cars start in their original order. However, as the race progresses, their order changes. She records whenever one car overtakes another, essentially swapping places with it on the track.\nDuring the race, Alice notices something curious: no car overtakes another more than once. In other words, for any two cars\n𝑥\nand\n𝑦\n, there are at most two overtakes between them during the race: \"\n𝑥\novertakes\n𝑦\n\" and/or \"\n𝑦\novertakes\n𝑥\n\".\nAt the end of the race, Alice carefully writes down the final order of the cars\n𝑐\n1\n,\n𝑐\n2\n,…,\n𝑐\n𝑛\n, where\n𝑐\n1\nrepresents the winner of the race.\nAlice's friend, however, is only interested in the final ranking and discards all of Alice's notes except for the final ordering. As Alice is quite curious, she wonders: What is the longest possible sequence of overtakes she could have observed during the race? Your task is to help Alice answer this question.",
+    "input_specification": "The first line of the input contains a single integer\n𝑛(1≤𝑛≤1000)\n — the number of cars in the race.\nThe second line contains a permutation\n𝑐\n1\n,\n𝑐\n2\n,…,\n𝑐\n𝑛\n(1≤\n𝑐\n𝑖\n≤𝑛,\n𝑐\n𝑖\n≠\n𝑐\n𝑗\n)\n — the final order of the cars.",
+    "output_specification": "The first line of the output should contain a single integer\n𝑚\n — the maximum possible number of overtakes that can occur during the race.\nEach of the next\n𝑚\nlines should contain two integers\n𝑥\nand\n𝑦\n(\n1≤𝑥,𝑦≤𝑛\n,\n𝑥≠𝑦\n) representing an overtake event, where car\n𝑥\novertakes car\n𝑦\n. This means that car\n𝑥\nwas directly behind car\n𝑦\nand overtakes it. The overtakes must be listed in the order they occurred during the race.\nAfter all\n𝑚\novertakes have occurred, the cars must arrive at the finish line in the order\n𝑐\n1\n,\n𝑐\n2\n,…,\n𝑐\n𝑛\n. Note that any car\n𝑥\nshould not overtake another car\n𝑦\nmore than once.\nIf there are multiple possible longest sequences of overtakes, output any of them.",
+    "sample_tests": [
+        {
+            "input": "3\n2 3 1",
+            "output": "4\n2 1\n3 1\n3 2\n2 3"
+        },
+        {
+            "input": "1\n1",
+            "output": "0"
+        },
+        {
+            "input": "2\n1 2",
+            "output": "2\n2 1\n1 2"
+        }
+    ],
+    "note": "Not found",
+    "tags": [
+        "constructive algorithms"
+    ],
+    "rating": "1600"
+}

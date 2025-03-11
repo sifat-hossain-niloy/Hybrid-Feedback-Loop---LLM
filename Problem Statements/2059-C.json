@@ -1,0 +1,21 @@
+{
+    "statement": "Nikyr has started working as a queue manager at the company \"Black Contour.\" He needs to choose the order of servicing customers. There are a total of\nn\nqueues, each initially containing\n0\npeople. In each of the next\nn\nmoments of time, there are two sequential events:\nNew customers arrive in all queues. More formally, at the\nj\n-th moment of time, the number of people in the\ni\n-th queue increases by a positive integer\nai,j\n.\nNikyr chooses exactly one of the\nn\nqueues to be served at that moment in time. The number of customers in this queue becomes\n0\n.\nLet the number of people in the\ni\n-th queue after all events be\nxi\n. Nikyr wants MEX\n†\nof the collection\nx1,x2,…,xn\nto be as large as possible. Help him determine the maximum value he can achieve with an optimal order of servicing the queues.\n†\nThe minimum excluded (MEX) of a collection of integers\nc1,c2,…,ck\nis defined as the smallest non-negative integer\ny\nwhich does not occur in the collection\nc\n.\nFor example:\nMEX([2,2,1])=0\n, since\n0\ndoes not belong to the array.\nMEX([3,1,0,1])=2\n, since\n0\nand\n1\nbelong to the array, but\n2\ndoes not.\nMEX([0,3,1,2])=4\n, since\n0\n,\n1\n,\n2\n, and\n3\nbelong to the array, but\n4\ndoes not.",
+    "input_specification": "Each test consists of multiple test cases. The first line contains a single integer\nt\n(\n1≤t≤2⋅104\n) — the number of test cases. The description of the test cases follows.\nThe first line of each test case contains a single integer\nn\n(\n1≤n≤300\n) — the number of queues and moments of time.\nThe\ni\n-th of the next\nn\nlines contains\nn\nintegers\nai,1,ai,2,…,ai,n\n(\n1≤ai,j≤109\n) — the number of new customers in the\ni\n-th queue at each moment of time.\nIt is guaranteed that the sum of\n𝑛\n2\nover all test cases does not exceed\n2⋅\n10\n5\n.",
+    "output_specification": "For each test case, output a single integer — the maximum value of\nMEX([\n𝑥\n1\n,\n𝑥\n2\n,…,\n𝑥\n𝑛\n])\nthat can be achieved.",
+    "sample_tests": [
+        {
+            "input": "4\n2\n1 2\n2 1\n2\n10 10\n10 10\n3\n2 3 3\n4 4 1\n2 1 1\n4\n4 2 2 17\n1 9 3 1\n5 5 5 11\n1 2 1 1",
+            "output": "2\n1\n3\n3"
+        }
+    ],
+    "note": "In the first test case, the second queue can be served at time\n1\n, and the first queue at time\n2\n. There will be\n𝑥\n1\n=0\npeople left in the first queue and\n𝑥\n2\n=1\nperson left in the second queue. Therefore, the answer is\nMEX([0,1])=2\n.\nIn the second test case, the first queue can be served both times. There will be\n𝑥\n1\n=0\npeople left in the first queue and\n𝑥\n2\n=20\npeople left in the second queue. Therefore, the answer is\nMEX([0,20])=1\n.\nIn the third test case, the third queue can be served at time\n1\n, the second queue at time\n2\n, and the first queue at time\n3\n. There will be\n𝑥\n1\n=0\npeople left in the first queue,\n𝑥\n2\n=1\nperson left in the second queue, and\n𝑥\n3\n=2\npeople left in the third queue. Therefore, the answer is\nMEX([0,1,2])=3\n.",
+    "tags": [
+        "brute force",
+        "constructive algorithms",
+        "graph matchings",
+        "greedy",
+        "math",
+        "sortings"
+    ],
+    "rating": "1600"
+}

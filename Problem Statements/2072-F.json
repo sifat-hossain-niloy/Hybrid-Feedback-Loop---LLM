@@ -1,0 +1,22 @@
+{
+    "statement": "Monsters are approaching the city, and to protect it, Akito must create a protective field around the city. As everyone knows, protective fields come in various levels. Akito has chosen the field of level\nn\n. To construct the field, a special phrase is required, which is the\nn\n-th row of the Great Magical Triangle, represented as a two-dimensional array. We will call this array\nT\n.\nThe triangle is defined as follows:\nIn the\ni\n-th row, there are\ni\nintegers.\nThe single integer in the first row is\nk\n.\nLet the\nj\n-th element of the\ni\n-th row be denoted as\nTi,j\n. Then\nTi,j={\nTi−1,j−1⊕Ti−1,j, if 1<j<i\nTi−1,j, if j=1\nTi−1,j−1, if j=i\nwhere\na⊕b\nis the bitwise exclusive \"OR\"(XOR) of the integers\na\nand\nb\n.\nHelp Akito find the integers in the\nn\n-th row of the infinite triangle before the monsters reach the city.",
+    "input_specification": "The first line contains the integer\nt\n(\n1≤t≤104\n) — the number of test cases.\nIn the only line of each test case, there are two integers\n𝑛\nand\n𝑘\n(\n1≤𝑛≤\n10\n6\n, 1≤𝑘<\n2\n31\n) — the row index that Akito needs and the integer in the first row of the Great Magical Triangle, respectively.\nIt is guaranteed that the sum of\n𝑛\nacross all test cases does not exceed\n10\n6\n.",
+    "output_specification": "For each test case, output\n𝑛\nintegers — the elements of the\n𝑛\n-th row of the Great Magical Triangle.",
+    "sample_tests": [
+        {
+            "input": "5\n1 5\n2 10\n3 16\n9 1\n1 52",
+            "output": "5\n10 10\n16 0 16\n1 0 0 0 0 0 0 0 1\n52"
+        }
+    ],
+    "note": "In the first example, the first row of the Great Magical Triangle is\n[5]\nby definition.\nIn the second example,\n𝑇\n2,1\n=\n𝑇\n1,1\n=10\nand\n𝑇\n2,2\n=\n𝑇\n1,1\n=10\n.",
+    "tags": [
+        "2-sat",
+        "bitmasks",
+        "combinatorics",
+        "constructive algorithms",
+        "fft",
+        "math",
+        "number theory"
+    ],
+    "rating": "1700"
+}

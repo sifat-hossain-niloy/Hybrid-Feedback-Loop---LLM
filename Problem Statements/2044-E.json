@@ -1,0 +1,20 @@
+{
+    "statement": "Wave is given five integers\nk\n,\nl1\n,\nr1\n,\nl2\n, and\nr2\n. Wave wants you to help her count the number of ordered pairs\n(x,y)\nsuch that all of the following are satisfied:\nl1≤x≤r1\n.\nl2≤y≤r2\n.\nThere exists a non-negative integer\nn\nsuch that\ny\nx\n=kn\n.",
+    "input_specification": "The first line contains an integer\nt\n(\n1≤t≤104\n) — the number of test cases.\nThe only line of each test case contains five integers\nk\n,\nl1\n,\nr1\n,\nl2\n, and\nr2\n(\n2≤k≤109,1≤l1≤r1≤109,1≤l2≤r2≤109\n).",
+    "output_specification": "For each test case, output the number of matching ordered pairs\n(𝑥,𝑦)\non a new line.",
+    "sample_tests": [
+        {
+            "input": "5\n2 2 6 2 12\n2 1 1000000000 1 1000000000\n3 5 7 15 63\n1000000000 1 5 6 1000000000\n15 17 78 2596 20914861",
+            "output": "12\n1999999987\n6\n1\n197"
+        }
+    ],
+    "note": "In the third test case, the matching ordered pairs are the following:\nIn the fourth test case, the only valid ordered pair is\n(1,1000000000)",
+    "tags": [
+        "binary search",
+        "greedy",
+        "implementation",
+        "math",
+        "number theory"
+    ],
+    "rating": "1300"
+}

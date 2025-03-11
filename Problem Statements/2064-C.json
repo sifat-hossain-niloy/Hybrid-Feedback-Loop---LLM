@@ -1,0 +1,19 @@
+{
+    "statement": "You have an array\n𝑎\nof length\n𝑛\nconsisting of non-zero integers. Initially, you have\n0\ncoins, and you will do the following until\n𝑎\nis empty:\nLet\n𝑚\nbe the current size of\n𝑎\n. Select an integer\n𝑖\nwhere\n1≤𝑖≤𝑚\n, gain\n|\n𝑎\n𝑖\n|\n∗\ncoins, and then:\nif\n𝑎\n𝑖\n<0\n, then replace\n𝑎\nwith\n[\n𝑎\n1\n,\n𝑎\n2\n,…,\n𝑎\n𝑖−1\n]\n(that is, delete the suffix beginning with\n𝑎\n𝑖\n);\notherwise, replace\n𝑎\nwith\n[\n𝑎\n𝑖+1\n,\n𝑎\n𝑖+2\n,…,\n𝑎\n𝑚\n]\n(that is, delete the prefix ending with\n𝑎\n𝑖\n).\nFind the maximum number of coins you can have at the end of the process.\n∗\nHere\n|\n𝑎\n𝑖\n|\nrepresents the absolute value of\n𝑎\n𝑖\n: it equals\n𝑎\n𝑖\nwhen\n𝑎\n𝑖\n>0\nand\n−\n𝑎\n𝑖\nwhen\n𝑎\n𝑖\n<0\n.",
+    "input_specification": "The first line contains an integer\n𝑡\n(\n1≤𝑡≤\n10\n4\n) — the number of testcases.\nThe first line of each testcase contains an integer\n𝑛\n(\n1≤𝑛≤2⋅\n10\n5\n) — the length of\n𝑎\n.\nThe second line of each testcase contains\n𝑛\nintegers\n𝑎\n1\n,\n𝑎\n2\n,…,\n𝑎\n𝑛\n(\n−\n10\n9\n≤\n𝑎\n𝑖\n≤\n10\n9\n,\n𝑎\n𝑖\n≠0\n).\nThe sum of\n𝑛\nacross all testcases does not exceed\n2⋅\n10\n5\n.",
+    "output_specification": "For each test case, output the maximum number of coins you can have at the end of the process.",
+    "sample_tests": [
+        {
+            "input": "3\n6\n3 1 4 -1 -5 -9\n6\n-10 -3 -17 1 19 20\n1\n1",
+            "output": "23\n40\n1"
+        }
+    ],
+    "note": "An example of how to get\n23\ncoins in the first testcase is as follows:\nAn example of how to get\n40\ncoins in the second testcase is as follows:",
+    "tags": [
+        "brute force",
+        "constructive algorithms",
+        "dp",
+        "greedy"
+    ],
+    "rating": "1300"
+}

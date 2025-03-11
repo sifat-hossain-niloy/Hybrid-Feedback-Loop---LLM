@@ -1,0 +1,18 @@
+{
+    "statement": "Akito still has nowhere to live, and the price for a small room is everywhere. For this reason, Akito decided to get a job at a bank as a key creator for storages.\nIn this magical world, everything is different. For example, the key for a storage with the code\n(𝑛,𝑥)\nis an array\n𝑎\nof length\n𝑛\nsuch that:\n𝑎\n1\n | \n𝑎\n2\n | \n𝑎\n3\n | … | \n𝑎\n𝑛\n=𝑥\n, where\n𝑎 | 𝑏\nis the bitwise \"OR\" of numbers\n𝑎\nand\n𝑏\n.\nMEX({\n𝑎\n1\n,\n𝑎\n2\n,\n𝑎\n3\n,…,\n𝑎\n𝑛\n})\n∗\nis maximized among all such arrays.\nAkito diligently performed his job for several hours, but suddenly he got a headache. Substitute for him for an hour; for the given\n𝑛\nand\n𝑥\n, create any key for the storage with the code\n(𝑛,𝑥)\n.\n∗\nMEX(𝑆)\nis the minimum non-negative integer\n𝑧\nsuch that\n𝑧\nis not contained in the set\n𝑆\nand all\n0≤𝑦<𝑧\nare contained in\n𝑆\n.",
+    "input_specification": "The first line contains the number\n𝑡\n(\n1≤𝑡≤\n10\n4\n) — the number of test cases.\nIn the only line of each test case, two numbers\n𝑛\nand\n𝑥\n(\n1≤𝑛≤2⋅\n10\n5\n,0≤𝑥<\n2\n30\n) are given — the length of the array and the desired value of the bitwise \"OR\".\nIt is guaranteed that the sum of\n𝑛\nacross all test cases does not exceed\n2⋅\n10\n5\n.",
+    "output_specification": "For each test case, output\n𝑛\nintegers\n𝑎\n𝑖\n(\n0≤\n𝑎\n𝑖\n<\n2\n30\n) — the elements of the key array that satisfy all the conditions.\nIf there are multiple suitable arrays, output any of them.",
+    "sample_tests": [
+        {
+            "input": "9\n1 69\n7 7\n5 7\n7 3\n8 7\n3 52\n9 11\n6 15\n2 3",
+            "output": "69\n6 0 3 4 1 2 5\n4 1 3 0 2\n0 1 2 3 2 1 0\n7 0 6 1 5 2 4 3\n0 52 0\n0 1 8 3 0 9 11 2 10\n4 0 3 8 1 2\n0 3"
+        }
+    ],
+    "note": "Not found",
+    "tags": [
+        "bitmasks",
+        "constructive algorithms",
+        "greedy"
+    ],
+    "rating": "1200"
+}

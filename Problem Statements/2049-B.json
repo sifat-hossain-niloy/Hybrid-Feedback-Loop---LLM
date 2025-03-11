@@ -1,0 +1,19 @@
+{
+    "statement": "Cats are attracted to pspspsps, but Evirir, being a dignified dragon, is only attracted to pspspsps with oddly specific requirements...\nGiven a string\ns=s1s2…sn\nof length\nn\nconsisting of characters p, s, and . (dot), determine whether a permutation\n∗\np\nof length\nn\nexists, such that for all integers\ni\n(\n1≤i≤n\n):\nIf\nsi\nis p, then\n[p1,p2,…,pi]\nforms a permutation (of length\ni\n);\nIf\nsi\nis s, then\n[pi,pi+1,…,pn]\nforms a permutation (of length\nn−i+1\n);\nIf\nsi\nis ., then there is no additional restriction.\n∗\nA permutation of length\nn\nis an array consisting of\nn\ndistinct integers from\n1\nto\nn\nin arbitrary order. For example,\n[2,3,1,5,4]\nis a permutation, but\n[1,2,2]\nis not a permutation (\n2\nappears twice in the array), and\n[1,3,4]\nis also not a permutation (\nn=3\nbut there is\n4\nin the array).",
+    "input_specification": "Each test contains multiple test cases. The first line contains the number of test cases\nt\n(\n1≤t≤104\n). The description of the test cases follows.\nThe first line of each test case contains a single integer\n𝑛\n(\n1≤𝑛≤500\n), the length of\n𝑠\n.\nThe second line of each test case contains a string\n𝑠\nof length\n𝑛\nthat consists of the characters p, s, and ..\nIt is guaranteed that the sum of\n𝑛\nover all test cases does not exceed\n5000\n.",
+    "output_specification": "For each test case, output YES or NO on a line. Output YES if there is such a permutation and NO otherwise.\nYou can output the answer in any case (upper or lower). For example, the strings \"yEs\", \"yes\", \"Yes\", and \"YES\" will be recognized as positive responses.",
+    "sample_tests": [
+        {
+            "input": "9\n4\ns.sp\n6\npss..s\n5\nppppp\n2\nsp\n4\n.sp.\n8\npsss....\n1\n.\n8\npspspsps\n20\n....................",
+            "output": "YES\nNO\nYES\nYES\nNO\nNO\nYES\nNO\nYES"
+        }
+    ],
+    "note": "For the first test case, one permutation that works is\n𝑝=[3,4,1,2]\n. The restrictions are as follows:\nFor the second test case, it can be proven that there is no permutation that satisfies all restrictions.\nFor the third test case, one permutation that satisfies the constraints is\n𝑝=[1,2,3,4,5]\n.",
+    "tags": [
+        "brute force",
+        "constructive algorithms",
+        "graph matchings",
+        "implementation"
+    ],
+    "rating": "1300"
+}

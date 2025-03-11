@@ -1,0 +1,17 @@
+{
+    "statement": "Cirno has a sequence\n𝑎\nof length\n𝑛\n. She can perform either of the following two operations for any (possibly, zero) times unless the current length of\n𝑎\nis\n1\n:\nReverse the sequence. Formally,\n[\n𝑎\n1\n,\n𝑎\n2\n,…,\n𝑎\n𝑛\n]\nbecomes\n[\n𝑎\n𝑛\n,\n𝑎\n𝑛−1\n,…,\n𝑎\n1\n]\nafter the operation.\nReplace the sequence with its difference sequence. Formally,\n[\n𝑎\n1\n,\n𝑎\n2\n,…,\n𝑎\n𝑛\n]\nbecomes\n[\n𝑎\n2\n−\n𝑎\n1\n,\n𝑎\n3\n−\n𝑎\n2\n,…,\n𝑎\n𝑛\n−\n𝑎\n𝑛−1\n]\nafter the operation.\nFind the maximum possible sum of elements of\n𝑎\nafter all operations.",
+    "input_specification": "The first line of input contains a single integer\n𝑡\n(\n1≤𝑡≤100\n) — the number of input test cases.\nThe first line of each test case contains a single integer\n𝑛\n(\n1≤𝑛≤50\n) — the length of sequence\n𝑎\n.\nThe second line of each test case contains\n𝑛\nintegers\n𝑎\n1\n,\n𝑎\n2\n,…,\n𝑎\n𝑛\n(\n|\n𝑎\n𝑖\n|≤1000\n) — the sequence\n𝑎\n.",
+    "output_specification": "For each test case, print an integer representing the maximum possible sum.",
+    "sample_tests": [
+        {
+            "input": "5\n1\n-1000\n2\n5 -3\n2\n1000 1\n9\n9 7 9 -9 9 -8 7 -8 9\n11\n678 201 340 444 453 922 128 987 127 752 0",
+            "output": "-1000\n8\n1001\n2056\n269891"
+        }
+    ],
+    "note": "In the first test case, Cirno can not perform any operation, so the answer is\n−1000\n.\nIn the second test case, Cirno firstly reverses the sequence, then replaces the sequence with its difference sequence:\n[5,−3]→[−3,5]→[8]\n. It can be proven that this maximizes the sum, so the answer is\n8\n.\nIn the third test case, Cirno can choose not to operate, so the answer is\n1001\n.",
+    "tags": [
+        "brute force",
+        "math"
+    ],
+    "rating": "1200"
+}

@@ -1,0 +1,18 @@
+{
+    "statement": "Kevin enjoys logic puzzles.\nHe played a game with\n𝑛\nclassmates who stand in a line. The\n𝑖\n-th person from the left says that there are\n𝑎\n𝑖\nliars to their left (not including themselves).\nEach classmate is either honest or a liar, with the restriction that no two liars can stand next to each other. Honest classmates always say the truth. Liars can say either the truth or lies, meaning their statements are considered unreliable.\nKevin wants to determine the number of distinct possible game configurations modulo\n998244353\n. Two configurations are considered different if at least one classmate is honest in one configuration and a liar in the other.",
+    "input_specification": "Each test contains multiple test cases. The first line contains the number of test cases\n𝑡\n(\n1≤𝑡≤\n10\n4\n). The description of the test cases follows.\nThe first line of each test case contains an integer\n𝑛\n(\n1≤𝑛≤2⋅\n10\n5\n) — the number of classmates.\nThe second line contains\n𝑛\nintegers\n𝑎\n1\n,\n𝑎\n2\n,…,\n𝑎\n𝑛\n(\n0≤\n𝑎\n𝑖\n≤𝑛\n) — the number of liars to the left of the\n𝑖\n-th person they claimed.\nIt is guaranteed that the sum of\n𝑛\nover all test cases does not exceed\n2⋅\n10\n5\n.",
+    "output_specification": "For each test case, output one integer — the number of distinct game configurations modulo\n998244353\n.",
+    "sample_tests": [
+        {
+            "input": "8\n3\n0 1 2\n5\n0 0 0 0 0\n5\n0 0 1 1 2\n5\n0 1 2 3 4\n5\n0 0 1 1 1\n5\n5 1 5 2 5\n1\n0\n4\n2 3 1 1",
+            "output": "1\n2\n3\n0\n4\n1\n2\n0"
+        }
+    ],
+    "note": "We will use\nred\nto mark liars and\nblue\nto mark honest people.\nIn the first test case, the only possible way is\n(0,1,2)\n.\nIn the second test case, two possible ways are\n(0,0,0,0,0)\nand\n(0,0,0,0,0)\n.\nIn the third test case, three possible ways are\n(0,0,1,1,2)\n,\n(0,0,1,1,2)\n,\n(0,0,1,1,2)\n.",
+    "tags": [
+        "2-sat",
+        "combinatorics",
+        "dp"
+    ],
+    "rating": "1600"
+}

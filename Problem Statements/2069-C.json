@@ -1,0 +1,19 @@
+{
+    "statement": "Let's call an integer sequence beautiful if the following conditions hold:\nits length is at least\n3\n;\nfor every element except the first one, there is an element to the left less than it;\nfor every element except the last one, there is an element to the right larger than it;\nFor example,\n[1,4,2,4,7]\nand\n[1,2,4,8]\nare beautiful, but\n[1,2]\n,\n[2,2,4]\n, and\n[1,3,5,3]\nare not.\nRecall that a subsequence is a sequence that can be obtained from another sequence by removing some elements without changing the order of the remaining elements.\nYou are given an integer array\n𝑎\nof size\n𝑛\n, where every element is from\n1\nto\n3\n. Your task is to calculate the number of beautiful subsequences of the array\n𝑎\n. Since the answer might be large, print it modulo\n998244353\n.",
+    "input_specification": "The first line contains a single integer\n𝑡\n(\n1≤𝑡≤\n10\n4\n) — the number of test cases.\nThe first line of each test case contains a single integer\n𝑛\n(\n3≤𝑛≤2⋅\n10\n5\n).\nThe second line contains\n𝑛\nintegers\n𝑎\n1\n,\n𝑎\n2\n,…,\n𝑎\n𝑛\n(\n1≤\n𝑎\n𝑖\n≤3\n).\nAdditional constraint on the input: the sum of\n𝑛\nover all test cases doesn't exceed\n2⋅\n10\n5\n.",
+    "output_specification": "For each test case, print a single integer — the number of beautiful subsequences of the array\n𝑎\n, taken modulo\n998244353\n.",
+    "sample_tests": [
+        {
+            "input": "4\n7\n3 2 1 2 2 1 3\n4\n3 1 2 2\n3\n1 2 3\n9\n1 2 3 2 1 3 2 2 3",
+            "output": "3\n0\n1\n22"
+        }
+    ],
+    "note": "In the first test case of the example, the following subsequences are beautiful:",
+    "tags": [
+        "combinatorics",
+        "dp",
+        "greedy",
+        "two pointers"
+    ],
+    "rating": "1500"
+}

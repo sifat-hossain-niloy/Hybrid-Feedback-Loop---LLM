@@ -1,0 +1,18 @@
+{
+    "statement": "You are given a rooted tree, consisting of\n𝑛\nvertices. The vertices in the tree are numbered from\n1\nto\n𝑛\n, and the root is the vertex\n1\n. Let\n𝑑\n𝑥\nbe the distance (the number of edges on the shortest path) from the root to the vertex\n𝑥\n.\nThere is a chip that is initially placed at the root. You can perform the following operation as many times as you want (possibly zero):\nmove the chip from the current vertex\n𝑣\nto a vertex\n𝑢\nsuch that\n𝑑\n𝑢\n=\n𝑑\n𝑣\n+1\n. If\n𝑣\nis the root, you can choose any vertex\n𝑢\nmeeting this constraint; however, if\n𝑣\nis not the root,\n𝑢\nshould not be a neighbor of\n𝑣\n(there should be no edge connecting\n𝑣\nand\n𝑢\n).\nFor example, in the tree above, the following chip moves are possible:\n1→2\n,\n1→5\n,\n2→7\n,\n5→3\n,\n5→4\n,\n3→6\n,\n7→6\n.\nA sequence of vertices is valid if you can move the chip in such a way that it visits all vertices from the sequence (and only them), in the order they are given in the sequence.\nYour task is to calculate the number of valid vertex sequences. Since the answer might be large, print it modulo\n998244353\n.",
+    "input_specification": "The first line contains a single integer\n𝑡\n(\n1≤𝑡≤\n10\n4\n) — the number of test cases.\nThe first line of each test case contains a single integer\n𝑛\n(\n2≤𝑛≤3⋅\n10\n5\n).\nThe second line contains\n𝑛−1\nintegers\n𝑝\n2\n,\n𝑝\n3\n,…,\n𝑝\n𝑛\n(\n1≤\n𝑝\n𝑖\n<𝑖\n), where\n𝑝\n𝑖\nis the parent of the\n𝑖\n-th vertex in the tree. Vertex\n1\nis the root.\nAdditional constraint on the input: the sum of\n𝑛\nover all test cases doesn't exceed\n3⋅\n10\n5\n.",
+    "output_specification": "For each test case, print a single integer — the number of valid vertex sequences, taken modulo\n998244353\n.",
+    "sample_tests": [
+        {
+            "input": "3\n4\n1 2 1\n3\n1 2\n7\n1 2 2 1 4 5",
+            "output": "4\n2\n8"
+        }
+    ],
+    "note": "In the first example, the following sequences are valid:\n[1]\n,\n[1,2]\n,\n[1,4]\n,\n[1,4,3]\n.\nIn the second example, the following sequences are valid:\n[1]\n,\n[1,2]\n.\nIn the third example, the following sequences are valid:\n[1]\n,\n[1,2]\n,\n[1,2,7]\n,\n[1,2,7,6]\n,\n[1,5]\n,\n[1,5,3]\n,\n[1,5,3,6]\n,\n[1,5,4]\n.",
+    "tags": [
+        "dfs and similar",
+        "dp",
+        "trees"
+    ],
+    "rating": "1600"
+}

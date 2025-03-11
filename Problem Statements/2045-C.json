@@ -1,0 +1,29 @@
+{
+    "statement": "The word saraga is an abbreviation of sarana olahraga, an Indonesian term for a sports facility. It is created by taking the prefix sara of the word sarana and the suffix ga of the word olahraga. Interestingly, it can also be created by the prefix sa of the word sarana and the suffix raga of the word olahraga.\nAn abbreviation of two strings\n𝑆\nand\n𝑇\nis interesting if there are at least two different ways to split the abbreviation into two non-empty substrings such that the first substring is a prefix of\n𝑆\nand the second substring is a suffix of\n𝑇\n.\nYou are given two strings\n𝑆\nand\n𝑇\n. You want to create an interesting abbreviation of strings\n𝑆\nand\n𝑇\nwith minimum length, or determine if it is impossible to create an interesting abbreviation.",
+    "input_specification": "The first line consists of a string\n𝑆\n(\n1≤|𝑆|≤200000\n).\nThe second line consists of a string\n𝑇\n(\n1≤|𝑇|≤200000\n).\nBoth strings\n𝑆\nand\n𝑇\nonly consist of lowercase English letters.",
+    "output_specification": "If it is impossible to create an interesting abbreviation, output -1.\nOtherwise, output a string in a single line representing an interesting abbreviation of strings\n𝑆\nand\n𝑇\nwith minimum length. If there are multiple solutions, output any of them.",
+    "sample_tests": [
+        {
+            "input": "sarana\nolahraga",
+            "output": "saga"
+        },
+        {
+            "input": "berhiber\nwortelhijau",
+            "output": "berhijau"
+        },
+        {
+            "input": "icpc\nicpc",
+            "output": "icpc"
+        },
+        {
+            "input": "icpc\njakarta",
+            "output": "-1"
+        }
+    ],
+    "note": "Explanation for the sample input/output #1\nYou can split saga into s and aga, or sa and ga. The abbreviation saraga is interesting, but saga has a smaller length.\nExplanation for the sample input/output #2\nThe abbreviation belhijau is also interesting with minimum length, so it is another valid solution.",
+    "tags": [
+        "greedy",
+        "strings"
+    ],
+    "rating": "1400"
+}

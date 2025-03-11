@@ -1,0 +1,18 @@
+{
+    "statement": "With the approach of Valentine's Day, Skibidus desperately needs a way to rizz up his crush! Fortunately, he knows of just the way: creating the perfect Binary String!\nGiven a binary string\n∗\nt\n, let\nx\nrepresent the number of\n0\nin\nt\nand\ny\nrepresent the number of\n1\nin\nt\n. Its balance-value is defined as the value of\nmax(x−y,y−x)\n.\nSkibidus gives you three integers\nn\n,\nm\n, and\nk\n. He asks for your help to construct a binary string\ns\nof length\nn+m\nwith exactly\nn\n0\n's and\nm\n1\n's such that the maximum balance-value among all of its substrings\n†\nis exactly\nk\n. If it is not possible, output -1.\n∗\nA binary string only consists of characters\n0\nand\n1\n.\n†\nA string\na\nis a substring of a string\nb\nif\na\ncan be obtained from\nb\nby the deletion of several (possibly, zero or all) characters from the beginning and several (possibly, zero or all) characters from the end.",
+    "input_specification": "The first line contains an integer\nt\n(\n1≤t≤104\n) — the number of test cases.\nThe first and only line of each test case contains three integers\nn\n,\nm\n, and\nk\n(\n0≤n,m≤2⋅105\n,\n1≤k≤n+m\n,\nn+m≥1\n).\nIt is guaranteed that the sum of\nn\nand the sum of\nm\nover all test cases does not exceed\n2⋅105\n.",
+    "output_specification": "For each test case, if it is possible to construct\ns\n, output it on a new line. If there are multiple possible\ns\n, output any. Otherwise, output -1 on a new line.",
+    "sample_tests": [
+        {
+            "input": "6\n1 2 1\n4 3 2\n2 4 3\n8 3 2\n5 0 4\n5 0 5",
+            "output": "101\n0100101\n011011\n-1\n-1\n00000"
+        }
+    ],
+    "note": "In the first test case, we must construct\ns\nsuch that it contains one\n0\n, two\n1\n, and a maximum balance of\n1\namong all of its substrings. One possible valid\ns\nis\n101\nbecause:\nAmong all possible substrings, the maximum balance-value is\n1\n.\nIn the second test case, the substring with the maximum balance-value is\n0100\n, which has a balance of\n𝑚𝑎𝑥(3−1,1−3)=2\n.",
+    "tags": [
+        "constructive algorithms",
+        "greedy",
+        "strings"
+    ],
+    "rating": "1600"
+}

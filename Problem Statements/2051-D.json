@@ -1,0 +1,18 @@
+{
+    "statement": "You are given a sequence\n𝑎\n, consisting of\n𝑛\nintegers, where the\n𝑖\n-th element of the sequence is equal to\n𝑎\n𝑖\n. You are also given two integers\n𝑥\nand\n𝑦\n(\n𝑥≤𝑦\n).\nA pair of integers\n(𝑖,𝑗)\nis considered interesting if the following conditions are met:\n1≤𝑖<𝑗≤𝑛\n;\nif you simultaneously remove the elements at positions\n𝑖\nand\n𝑗\nfrom the sequence\n𝑎\n, the sum of the remaining elements is at least\n𝑥\nand at most\n𝑦\n.\nYour task is to determine the number of interesting pairs of integers for the given sequence\n𝑎\n.",
+    "input_specification": "The first line contains one integer\n𝑡\n(\n1≤𝑡≤\n10\n4\n) — the number of test cases.\nEach test case consists of two lines:\nAdditional constraint on the input: the sum of\n𝑛\nacross all test cases does not exceed\n2⋅\n10\n5\n.",
+    "output_specification": "For each test case, output one integer — the number of interesting pairs of integers for the given sequence\n𝑎\n.",
+    "sample_tests": [
+        {
+            "input": "7\n4 8 10\n4 6 3 6\n6 22 27\n4 9 6 3 4 5\n3 8 10\n3 2 1\n3 1 1\n2 3 4\n3 3 6\n3 2 1\n4 4 12\n3 3 2 1\n6 8 8\n1 1 2 2 2 3",
+            "output": "4\n7\n0\n0\n1\n5\n6"
+        }
+    ],
+    "note": "In the first example, there are\n4\ninteresting pairs of integers:",
+    "tags": [
+        "binary search",
+        "sortings",
+        "two pointers"
+    ],
+    "rating": "1200"
+}

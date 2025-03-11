@@ -1,0 +1,18 @@
+{
+    "statement": "You are given three strings:\n𝑎\n,\n𝑏\n, and\n𝑐\n, consisting of lowercase Latin letters. The string\n𝑐\nwas obtained in the following way:\nAt each step, either string\n𝑎\nor string\n𝑏\nwas randomly chosen, and the first character of the chosen string was removed from it and appended to the end of string\n𝑐\n, until one of the strings ran out. After that, the remaining characters of the non-empty string were added to the end of\n𝑐\n.\nThen, a certain number of characters in string\n𝑐\nwere randomly changed.\nFor example, from the strings\n𝑎=abra\nand\n𝑏=cada\n, without character replacements, the strings\ncaabdraa\n,\nabracada\n,\nacadabra\ncould be obtained.\nFind the minimum number of characters that could have been changed in string\n𝑐\n.",
+    "input_specification": "The first line of the input contains a single integer\n𝑡\n(\n1≤𝑡≤\n10\n3\n) — the number of test cases.\nThe first line of each test case contains one string of lowercase Latin letters\n𝑎\n(\n1≤|𝑎|≤\n10\n3\n) — the first string, where\n|𝑎|\ndenotes the length of string\n𝑎\n.\nThe second line of each test case contains one string of lowercase Latin letters\n𝑏\n(\n1≤|𝑏|≤\n10\n3\n) — the second string, where\n|𝑏|\ndenotes the length of string\n𝑏\n.\nThe third line of each test case contains one string of lowercase Latin letters\n𝑐\n(\n|𝑐|=|𝑎|+|𝑏|\n) — the third string.\nIt is guaranteed that the sum of\n|𝑎|\nacross all test cases does not exceed\n2⋅\n10\n3\n. Also, the sum of\n|𝑏|\nacross all test cases does not exceed\n2⋅\n10\n3\n.",
+    "output_specification": "For each test case, output a single integer — the minimum number of characters that could have been changed in string\n𝑐\n.",
+    "sample_tests": [
+        {
+            "input": "7\na\nb\ncb\nab\ncd\nacbd\nab\nba\naabb\nxxx\nyyy\nxyxyxy\na\nbcd\ndecf\ncodes\nhorse\ncodeforces\negg\nannie\negaegaeg",
+            "output": "1\n0\n2\n0\n3\n2\n3"
+        }
+    ],
+    "note": "Not found",
+    "tags": [
+        "dp",
+        "implementation",
+        "strings"
+    ],
+    "rating": "1500"
+}

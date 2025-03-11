@@ -1,0 +1,18 @@
+{
+    "statement": "Skibidus was abducted by aliens of Amog! Skibidus tries to talk his way out, but the Amog aliens don't believe him. To prove that he is not totally capping, the Amog aliens asked him to solve this task:\nAn integer\n𝑥\nis considered a semi-prime if it can be written as\n𝑝⋅𝑞\nwhere\n𝑝\nand\n𝑞\nare (not necessarily distinct) prime numbers. For example,\n9\nis a semi-prime since it can be written as\n3⋅3\n, and\n3\nis a prime number.\nSkibidus was given an array\n𝑎\ncontaining\n𝑛\nintegers. He must report the number of pairs\n(𝑖,𝑗)\nsuch that\n𝑖≤𝑗\nand\nlcm(\n𝑎\n𝑖\n,\n𝑎\n𝑗\n)\n∗\nis semi-prime.\n∗\nGiven two integers\n𝑥\nand\n𝑦\n,\nlcm(𝑥,𝑦)\ndenotes the least common multiple of\n𝑥\nand\n𝑦\n.",
+    "input_specification": "The first line contains an integer\n𝑡\n(\n1≤𝑡≤\n10\n4\n) — the number of test cases.\nThe first line of each test case contains an integer\n𝑛\n(\n2≤𝑛≤2⋅\n10\n5\n).\nThe following line contains\n𝑛\nintegers\n𝑎\n1\n,\n𝑎\n2\n,…,\n𝑎\n𝑛\n(\n2≤\n𝑎\n𝑖\n≤𝑛\n).\nIt is guaranteed that the sum of\n𝑛\nover all test cases does not exceed\n2⋅\n10\n5\n.",
+    "output_specification": "For each test case, output the number of ordered pairs of indices on a new line.",
+    "sample_tests": [
+        {
+            "input": "3\n4\n2 2 3 4\n6\n2 2 3 4 5 6\n9\n2 2 4 5 7 8 9 3 5",
+            "output": "5\n12\n18"
+        }
+    ],
+    "note": "In the first test case, the\n5\npairs of indices are\n(1,3)\n,\n(1,4)\n,\n(2,3)\n,\n(2,4)\n, and\n(4,4)\n.",
+    "tags": [
+        "combinatorics",
+        "math",
+        "number theory"
+    ],
+    "rating": "1700"
+}

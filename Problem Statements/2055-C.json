@@ -1,0 +1,20 @@
+{
+    "statement": "There are no mountains in Florida, and Florida Man cannot comprehend their existence. As such, he really needs your help with this one.\nIn the wilderness lies a region of mountainous terrain represented as a rectangular grid with\nn\nrows and\nm\ncolumns. Each cell in the grid is identified by its position\n(i,j)\n, where\ni\nis the row index and\nj\nis the column index. The altitude of cell\n(i,j)\nis denoted by\nai,j\n.\nHowever, this region has been tampered with. A path consisting of\nn+m−1\ncells, starting from the top-left corner\n(1,1)\nand ending at the bottom-right corner\n(n,m)\n, has been cleared. For every cell\n(i,j)\nalong this path, the altitude\nai,j\nhas been set to\n0\n. The path moves strictly via downward (\nD\n) or rightward (\nR\n) steps.\nTo restore the terrain to its original state, it is known that the region possessed a magical property before it was tampered with: all rows and all columns shared the same sum of altitudes. More formally, there exists an integer\nx\nsuch that\n∑\nm\nj=1\nai,j=x\nfor all\n1≤i≤n\n, and\n∑\nn\ni=1\nai,j=x\nfor all\n1≤j≤m\n.\nYour task is to assign new altitudes to the cells on the path such that the above magical property is restored. It can be proven that a solution always exists. If there are multiple solutions that satisfy the property, any one of them may be provided.",
+    "input_specification": "Each test contains multiple test cases. The first line contains the number of test cases\nt\n(\n1≤t≤104\n). The description of the test cases follows.\nThe first line of each test case contains two integers\nn\nand\nm\n(\n2≤n,m≤1000\n) — the number of rows and columns in the grid.\nThe second line of each test case contains a string\n𝑠\nof length\n𝑛+𝑚−2\n(\n𝑠\n𝑖\n=𝙳\nor\n𝑠\n𝑖\n=𝚁\n) — the steps the path makes from\n(1,1)\nto\n(𝑛,𝑚)\n. The character\n𝙳\nrepresents a downward step, and\n𝚁\nrepresents a rightward step.\nThe\n𝑖\n-th of the next\n𝑛\nlines each contain\n𝑚\nintegers\n𝑎\n𝑖,1\n,\n𝑎\n𝑖,2\n,…,\n𝑎\n𝑖,𝑚\n(\n−\n10\n6\n≤\n𝑎\n𝑖,𝑗\n≤\n10\n6\n) — the altitude of each cell in the grid. It is guaranteed that if a cell\n(𝑖,𝑗)\nlies on the path, then\n𝑎\n𝑖,𝑗\n=0\n.\nIt is guaranteed that the sum of\n𝑛⋅𝑚\nover all test cases does not exceed\n10\n6\n.",
+    "output_specification": "For each test case, output\n𝑛\nlines of\n𝑚\nintegers representing the restored grid of altitudes\n𝑏\n𝑖,𝑗\n. The altitudes must satisfy\n−\n10\n15\n≤\n𝑏\n𝑖,𝑗\n≤\n10\n15\n, and additionally\n𝑎\n𝑖,𝑗\n=\n𝑏\n𝑖,𝑗\nif\n(𝑖,𝑗)\nis not on the path. If multiple solutions exist, output any of them.",
+    "sample_tests": [
+        {
+            "input": "4\n3 3\nDRRD\n0 2 3\n0 0 0\n3 1 0\n4 5\nDRRRRDD\n0 1 0 2 3\n0 0 0 0 0\n-1 0 -3 -3 0\n0 0 0 -1 0\n2 3\nRRD\n0 0 0\n0 1 0\n5 5\nDDDDRRRR\n0 25 2 9 11\n0 6 13 20 22\n0 17 24 1 8\n0 3 10 12 19\n0 0 0 0 0",
+            "output": "1 2 3\n2 3 1\n3 1 2\n-6 1 0 2 3\n7 -1 3 2 -11\n-1 0 -3 -3 7\n0 0 0 -1 1\n0 -1 1\n0 1 -1\n18 25 2 9 11\n4 6 13 20 22\n15 17 24 1 8\n21 3 10 12 19\n7 14 16 23 5"
+        }
+    ],
+    "note": "In the first test case, the grid has been filled such that every row and column contains the numbers\n1,2,3\nin some order, resulting in a common sum of\n6\n.\nIn the second test case, the grid has been filled such that all rows and columns sum to\n0\n.",
+    "tags": [
+        "brute force",
+        "constructive algorithms",
+        "greedy",
+        "math",
+        "two pointers"
+    ],
+    "rating": "1400"
+}
