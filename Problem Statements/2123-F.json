@@ -1,0 +1,17 @@
+{
+    "statement": "Call a permutation\n∗\np\nof length\nn\ngood if\ngcd(pi,i)\n†\n>1\nfor all\n2≤i≤n\n. Find a good permutation with the minimum number of fixed points\n‡\nacross all good permutations of length\nn\n. If there are multiple such permutations, print any of them.\n∗\nA permutation of length\nn\nis an array that contains every integer from\n1\nto\nn\nexactly once, in any order.\n†\ngcd(x,y)\ndenotes the greatest common divisor (GCD) of\nx\nand\ny\n.\n‡\nA fixed point of a permutation\np\nis an index\nj\n(\n1≤j≤n\n) such that\npj=j\n.",
+    "input_specification": "The first line contains an integer\nt\n(\n1≤t≤\n10\n4\n)  — the number of test cases.\nThe only line of each test case contains an integer\nn\n(\n2≤n≤\n10\n5\n) — the length of the permutation.\nIt is guaranteed that the sum of\nn\nover all test cases does not exceed\n10\n5\n.",
+    "output_specification": "For each test case, output on a single line an example of a good permutation of length\nn\nwith the minimum number of fixed points.",
+    "sample_tests": [
+        {
+            "input": "4\n2\n3\n6\n13",
+            "output": "1 2\n1 2 3\n1 4 6 2 5 3\n1 12 9 6 10 8 7 4 3 5 11 2 13"
+        }
+    ],
+    "note": "In the third sample, we construct the permutation\n",
+    "tags": [
+        "constructive algorithms",
+        "number theory"
+    ],
+    "rating": "1700"
+}

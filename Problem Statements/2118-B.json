@@ -1,0 +1,16 @@
+{
+    "statement": "There is a matrix\nA\nof size\nn×n\nwhere\nA\ni,j\n=j\nfor all\n1≤i,j≤n\n.\nIn one operation, you can select a row and reverse any subarray\n∗\nin it.\nFind a sequence of at most\n2n\noperations such that every column will contain a permutation\n†\nof length\nn\n.\nIt can be proven that the construction is always possible. If there are multiple solutions, output any of them.\n∗\nAn array\na\nis a subarray of an array\nb\nif\na\ncan be obtained from\nb\nby deleting zero or more elements from the beginning and zero or more elements from the end.\n†\nA permutation of length\nn\nis an array consisting of\nn\ndistinct integers from\n1\nto\nn\nin arbitrary order. For example,\n[2,3,1,5,4]\nis a permutation, but\n[1,2,2]\nis not a permutation (\n2\nappears twice in the array), and\n[1,3,4]\nis also not a permutation (\nn=3\nbut there is\n4\nin the array).",
+    "input_specification": "Each test contains multiple test cases. The first line contains the number of test cases\nt\n(\n1≤t≤100\n). The description of the test cases follows.\nThe first line of each test case contains one integer\nn\n(\n3≤n≤5000\n) — denoting the number of rows and columns in the matrix.\nIt is guaranteed that the sum of\nn\nover all test cases does not exceed\n5000\n.",
+    "output_specification": "For each test case, on the first line, print an integer\nk\n (0≤k≤2n)\n, the number of operations you wish to perform. On the next lines, you should print the operations.\nTo print an operation, use the format \"\nilr\n\" (\n1≤l≤r≤n\nand\n1≤i≤n\n) which reverses the subarray\nA\ni,l\n,\nA\ni,l+1\n,\n…\n,\nA\ni,r\n.",
+    "sample_tests": [
+        {
+            "input": "2\n3\n4",
+            "output": "4\n2 1 3\n2 2 3\n3 1 2\n3 2 3\n5\n2 1 4\n3 1 3\n3 2 4\n4 3 4\n4 1 2"
+        }
+    ],
+    "note": "In the first test case, the following operations are a valid solution:",
+    "tags": [
+        "constructive algorithms"
+    ],
+    "rating": "1200"
+}

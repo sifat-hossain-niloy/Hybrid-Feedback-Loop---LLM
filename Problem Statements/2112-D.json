@@ -1,0 +1,19 @@
+{
+    "statement": "Let\nu\nand\nv\nbe two distinct vertices in a directed graph. Let's call the ordered pair\n(u,v)\ngood if there exists a path from vertex\nu\nto vertex\nv\nalong the edges of the graph.\nYou are given an undirected tree with\nn\nvertices and\nn−1\nedges. Determine whether it is possible to assign a direction to each edge of this tree so that the number of good pairs in it is exactly\nn\n. If it is possible, print any way to direct the edges resulting in exactly\nn\ngood pairs.\nOne possible directed version of the tree for the first test case.",
+    "input_specification": "The first line contains one integer\nt\n(\n1≤t≤\n10\n4\n) — the number of test cases.\nThe first line of each test case contains one integer\nn\n(\n2≤n≤2⋅\n10\n5\n) — the number of vertices in the tree.\nThe next\nn−1\nlines describe the edges. The\ni\n-th line contains two integers\nu\ni\nand\nv\ni\n(\n1≤\nu\ni\n,\nv\ni\n≤n\n;\nu\ni\n≠\nv\ni\n) — the vertices connected by the\ni\n-th edge.\nIt is guaranteed that the edges in each test case form an undirected tree and that the sum of\nn\nover all test cases does not exceed\n2⋅\n10\n5\n.",
+    "output_specification": "For each test case, print \"NO\" (case-insensitive) if it is impossible to direct all edges of the tree and obtain exactly\nn\ngood pairs of vertices.\nOtherwise, print \"YES\" (case-insensitive) and then print\nn−1\npairs of integers\nu\ni\nand\nv\ni\nseparated by spaces — the edges directed from\nu\ni\nto\nv\ni\n.\nThe edges can be printed in any order. If there are multiple answers, output any.",
+    "sample_tests": [
+        {
+            "input": "4\n5\n1 2\n2 4\n1 3\n3 5\n5\n1 2\n1 3\n1 4\n4 5\n2\n2 1\n4\n3 1\n1 2\n2 4",
+            "output": "YES\n1 2\n3 1\n3 5\n4 2\nYES\n2 1\n3 1\n4 1\n5 4\nNO\nYES\n1 3\n2 1\n2 4"
+        }
+    ],
+    "note": "The tree from the first test case and its possible directed version are shown in the legend above. In this version, there are exactly\n5\ngood pairs of vertices:\n(3,5)\n,\n(3,1)\n,\n(3,2)\n,\n(1,2)\n, and\n(4,2)\n.\nOne possible directed version of the tree from the second test case is shown below:\nIn the presented answer, there are exactly\n5\ngood pairs of vertices:\n(2,1)\n,\n(3,1)\n,\n(4,1)\n,\n(5,4)\n, and\n(5,1)\n.\nIn the third test case, there are only two directed pairs of vertices, but for any direction of the edge, only one pair will be good.",
+    "tags": [
+        "constructive algorithms",
+        "dfs and similar",
+        "graphs",
+        "trees"
+    ],
+    "rating": "1700"
+}

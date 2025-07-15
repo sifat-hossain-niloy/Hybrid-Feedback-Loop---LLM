@@ -1,0 +1,20 @@
+{
+    "statement": "Harshith attained enlightenment in Competitive Programming by training under a Divine Tree. A divine tree is a rooted tree\n∗\nwith\nn\nnodes, labelled from\n1\nto\nn\n. The divineness of a node\nv\n, denoted\nd(v)\n, is defined as the smallest node label on the unique simple path from the root to node\nv\n.\nAryan, being a hungry Competitive Programmer, asked Harshith to pass on the knowledge. Harshith agreed on the condition that Aryan would be given two positive integers\nn\nand\nm\n, and he had to construct a divine tree with\nn\nnodes such that the total divineness of the tree is\nm\n, i.e.,\nn\n∑\ni=1\nd(i)=m\n. If no such tree exists, Aryan must report that it is impossible.\nDesperate for knowledge, Aryan turned to you for help in completing this task. As a good friend of his, help him solve the task.\n∗\nA tree is a connected graph without cycles. A rooted tree is a tree where one vertex is special and called the root.",
+    "input_specification": "Each test contains multiple test cases. The first line contains the number of test cases\nt\n(\n1≤t≤\n10\n4\n). The description of the test cases follows.\nThe first line of each test case contains two integers\nn\nand\nm\n(\n1≤n≤\n10\n6\n,\n1≤m≤\n10\n12\n).\nIt is guaranteed that the sum of\nn\nover all test cases does not exceed\n10\n6\n.",
+    "output_specification": "For each test case, output a single integer\nk\nin one line — the root of the tree.\nThen\nn−1\nlines follow, each containing a description of an edge of the tree — a pair of positive integers\nu\ni\n,\nv\ni\n(\n1≤\nu\ni\n,\nv\ni\n≤n\n,\nu\ni\n≠\nv\ni\n), denoting the\ni\n-th edge connects vertices\nu\ni\nand\nv\ni\n.\nThe edges and vertices of the edges can be printed in any order. If there are multiple solutions, print any of them.\nIf there is no solution, print \"-1\" instead.",
+    "sample_tests": [
+        {
+            "input": "2\n1 2\n4 6",
+            "output": "-1\n3\n3 1\n1 2\n2 4"
+        }
+    ],
+    "note": "In the first test case, there is a single node with a value of\n1\n, so getting a sum of\n2\nis impossible.\nIn the second test case, getting a sum of\n6\nis possible with the given tree rooted at\n3\n.",
+    "tags": [
+        "constructive algorithms",
+        "greedy",
+        "math",
+        "sortings",
+        "trees"
+    ],
+    "rating": "1400"
+}

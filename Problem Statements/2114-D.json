@@ -1,0 +1,19 @@
+{
+    "statement": "The game field is a matrix of size\n10\n9\n×\n10\n9\n, with a cell at the intersection of the\na\n-th row and the\nb\n-th column denoted as (\na,b\n).\nThere are\nn\nmonsters on the game field, with the\ni\n-th monster located in the cell (\nx\ni\n,\ny\ni\n), while the other cells are empty. No more than one monster can occupy a single cell.\nYou can move one monster to any cell on the field that is not occupied by another monster at most once .\nAfter that, you must select one rectangle on the field; all monsters within the selected rectangle will be destroyed. You must pay\n1\ncoin for each cell in the selected rectangle.\nYour task is to find the minimum number of coins required to destroy all the monsters.",
+    "input_specification": "The first line contains a single integer\nt\n(\n1≤t≤\n10\n4\n) — the number of test cases.\nThe first line of each test case contains a single integer\nn\n(\n1≤n≤2⋅\n10\n5\n) — the number of monsters on the field.\nThe following\nn\nlines contain two integers\nx\ni\nand\ny\ni\n(\n1≤\nx\ni\n,\ny\ni\n≤\n10\n9\n) — the coordinates of the cell with the\ni\n-th monster. All pairs (\nx\ni\n,\ny\ni\n) are distinct.\nIt is guaranteed that the sum of\nn\nacross all test cases does not exceed\n2⋅\n10\n5\n.",
+    "output_specification": "For each test case, output a single integer — the minimum cost to destroy all\nn\nmonsters.",
+    "sample_tests": [
+        {
+            "input": "7\n3\n1 1\n1 2\n2 1\n5\n1 1\n2 6\n6 4\n3 3\n8 2\n4\n1 1\n1 1000000000\n1000000000 1\n1000000000 1000000000\n1\n1 1\n5\n1 2\n4 2\n4 3\n3 1\n3 2\n3\n1 1\n2 5\n2 2\n4\n4 3\n3 1\n4 4\n1 2",
+            "output": "3\n32\n1000000000000000000\n1\n6\n4\n8"
+        }
+    ],
+    "note": "Below are examples of optimal moves, with the cells of the rectangle to be selected highlighted in green.",
+    "tags": [
+        "brute force",
+        "greedy",
+        "implementation",
+        "math"
+    ],
+    "rating": "1400"
+}

@@ -1,0 +1,18 @@
+{
+    "statement": "You are given a matrix of integers with\nn\nrows and\nm\ncolumns. The cell at the intersection of the\ni\n-th row and the\nj\n-th column contains the number\naij\n.\nYou can perform the following operation exactly once:\nChoose two numbers\n1≤r≤n\nand\n1≤c≤m\n.\nFor all cells\n(i,j)\nin the matrix such that\ni=r\nor\nj=c\n, decrease\naij\nby one.\nYou need to find the minimal possible maximum value in the matrix\na\nafter performing exactly one such operation.",
+    "input_specification": "Each test consists of multiple test cases. The first line contains a single integer\nt\n(\n1≤t≤\n10\n4\n) — the number of test cases. The description of the test cases follows.\nThe first line of each test case contains two integers\nn\nand\nm\n(\n1≤n⋅m≤\n10\n5\n) — the number of rows and columns in the matrix.\nThe next\nn\nlines of each test case describe the matrix\na\n. The\ni\n-th line contains\nm\nintegers\na\ni1\n,\na\ni2\n,…,\na\nim\n(\n1≤\na\nij\n≤100\n) — the elements in the\ni\n-th row of the matrix.\nIt is guaranteed that the sum of\nn⋅m\nacross all test cases does not exceed\n2⋅\n10\n5\n.",
+    "output_specification": "For each test case, output the minimum maximum value in the matrix\na\nafter performing exactly one operation.",
+    "sample_tests": [
+        {
+            "input": "10\n1 1\n1\n1 2\n1 2\n2 1\n2\n1\n2 2\n4 2\n3 4\n3 4\n1 2 3 2\n3 2 1 3\n2 1 3 2\n4 3\n1 5 1\n3 1 3\n5 5 5\n3 5 1\n4 4\n1 3 3 2\n2 3 2 2\n1 2 2 1\n3 3 2 3\n2 2\n2 2\n1 2\n3 2\n1 2\n2 1\n1 2\n3 3\n2 1 1\n1 2 1\n1 1 2",
+            "output": "0\n1\n1\n3\n2\n4\n3\n1\n1\n2"
+        }
+    ],
+    "note": "In the first three test cases, you can choose\nr=1\nand\nc=1\n.\nIn the fourth test case, you can choose\nr=1\nand\nc=2\n.\nIn the fifth test case, you can choose\nr=2\nand\nc=3\n.\nIn the sixth test case, you can choose\nr=3\nand\nc=2\n.",
+    "tags": [
+        "greedy",
+        "greedy",
+        "implementation"
+    ],
+    "rating": "1200"
+}

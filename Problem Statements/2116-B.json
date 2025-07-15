@@ -1,0 +1,18 @@
+{
+    "statement": "Flower gives Gellyfish two permutations\n∗\nof\n[0,1,…,n−1]\n:\np0,p1,…,pn−1\nand\nq0,q1,…,qn−1\n.\nNow Gellyfish wants to calculate an array\nr0,r1,…,rn−1\nthrough the following method:\nFor all\ni\n(\n0≤i≤n−1\n),\nri=\ni\nmax\nj=0\n(2pj+2qi−j)\nBut since Gellyfish is very lazy, you have to help her figure out the elements of\nr\n.\nSince the elements of\nr\nare very large, you are only required to output the elements of\nr\nmodulo\n998244353\n.\n∗\nAn array\nb\nis a permutation of an array\na\nif\nb\nconsists of the elements of\na\nin arbitrary order. For example,\n[4,2,3,4]\nis a permutation of\n[3,2,4,4]\nwhile\n[1,2,2]\nis not a permutation of\n[1,2,3]\n.",
+    "input_specification": "Each test contains multiple test cases. The first line contains the number of test cases\nt\n(\n1≤t≤\n10\n4\n). The description of the test cases follows.\nThe first line of each test case contains a single integer\nn\n(\n1≤n≤\n10\n5\n).\nThe second line of each test case contains\nn\nintegers\np\n0\n,\np\n1\n,…,\np\nn−1\n(\n0≤\np\ni\n<n\n).\nThe third line of each test case contains\nn\nintegers\nq\n0\n,\nq\n1\n,…,\nq\nn−1\n(\n0≤\nq\ni\n<n\n).\nIt is guaranteed that both\np\nand\nq\nare permutations of\n[0,1,…,n−1]\n.\nIt is guaranteed that the sum of\nn\nover all test cases does not exceed\n10\n5\n.",
+    "output_specification": "For each test case, output\nn\nintegers\nr\n0\n,\nr\n1\n,…,\nr\nn−1\nin a single line, modulo\n998244353\n.",
+    "sample_tests": [
+        {
+            "input": "3\n3\n0 2 1\n1 2 0\n5\n0 1 2 3 4\n4 3 2 1 0\n10\n5 8 9 3 4 0 2 7 1 6\n9 5 1 4 0 3 2 8 7 6",
+            "output": "3 6 8 \n17 18 20 24 32 \n544 768 1024 544 528 528 516 640 516 768"
+        }
+    ],
+    "note": "In the first test case:",
+    "tags": [
+        "greedy",
+        "math",
+        "sortings"
+    ],
+    "rating": "1300"
+}

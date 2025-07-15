@@ -1,0 +1,18 @@
+{
+    "statement": "Yousef wants to explode an array\na1,a2,…,an\n. An array gets exploded when all of its elements become equal to zero.\nIn one operation, Yousef can do exactly one of the following:\nFor every index\ni\nin\na\n, decrease\nai\nby\ni\n.\nFor every index\ni\nin\na\n, decrease\nai\nby\nn−i+1\n.\nYour task is to help Yousef determine if it is possible to explode the array using any number of operations.",
+    "input_specification": "The first line of the input contains an integer\nt\n(\n1≤t≤\n10\n4\n) — the number of test cases.\nThe first line of each test case contains an integer\nn\n(\n2≤n≤2⋅\n10\n5\n) — the size of the array.\nThe second line of each test case contains\nn\nintegers\na\n1\n,\na\n2\n,…,\na\nn\n(\n1≤\na\ni\n≤\n10\n9\n) — the elements of the array.\nIt is guaranteed that the sum of\nn\nover all test cases doesn't exceed\n2⋅\n10\n5\n.",
+    "output_specification": "For each test case, print \"YES\" if Yousef can explode the array, otherwise output \"NO\".\nYou can output the answer in any case (upper or lower). For example, the strings \"yEs\", \"yes\", \"Yes\", and \"YES\" will be recognized as positive responses.",
+    "sample_tests": [
+        {
+            "input": "6\n4\n3 6 6 3\n5\n21 18 15 12 9\n10\n2 6 10 2 5 5 1 2 4 10\n7\n10 2 16 12 8 20 4\n2\n52 101\n2\n10 2",
+            "output": "NO\nYES\nNO\nNO\nYES\nNO"
+        }
+    ],
+    "note": "In the second test case, we can do the following:\nIn the first, third, fourth, and sixth test cases, it can be proven that it is impossible to make all elements equal to zero using any number of operations.",
+    "tags": [
+        "binary search",
+        "math",
+        "number theory"
+    ],
+    "rating": "1200"
+}

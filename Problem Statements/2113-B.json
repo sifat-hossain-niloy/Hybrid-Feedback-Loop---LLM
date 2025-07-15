@@ -1,0 +1,17 @@
+{
+    "statement": "The roof is a rectangle of size\nw×h\nwith the bottom left corner at the point\n(0,0)\non the plane. Your team needs to completely cover this roof with identical roofing sheets of size\na×b\n, with the following conditions:\nThe sheets cannot be rotated (not even by\n90\n∘\n).\nThe sheets must not overlap (but they can touch at the edges).\nThe sheets can extend beyond the boundaries of the rectangular roof.\nA novice from your team has already placed two such sheets on the roof in such a way that the sheets do not overlap and each of them partially covers the roof.\nYour task is to determine whether it is possible to completely tile the roof without removing either of the two already placed sheets.",
+    "input_specification": "Each test contains multiple test cases. The first line contains the number of test cases\nt\n(\n1≤t≤\n10\n4\n). The description of the test cases follows.\nThe first line of each test case contains four integers\nw\n,\nh\n,\na\n, and\nb\n(\n1≤w,h,a,b≤\n10\n9\n) — the dimensions of the roof and the dimensions of the roofing sheets, respectively.\nThe second line of each test case contains four integers\nx\n1\n,\ny\n1\n,\nx\n2\n, and\ny\n2\n(\n−a+1≤\nx\n1\n,\nx\n2\n≤w−1,−b+1≤\ny\n1\n,\ny\n2\n≤h−1\n) — the coordinates of the bottom left corners of the already placed roofing sheets. It is guaranteed that these sheets do not overlap.",
+    "output_specification": "For each test case, output \"Yes\" (without quotes) if it is possible to completely tile the roof without removing either of the two already placed tiles, and \"No\" (without quotes) otherwise.\nYou can output the answer in any case (upper or lower). For example, the strings \"yEs\", \"yes\", \"Yes\", and \"YES\" will be recognized as positive responses.",
+    "sample_tests": [
+        {
+            "input": "7\n6 5 2 3\n-1 -2 5 4\n4 4 2 2\n0 0 3 1\n10 9 3 2\n0 0 4 3\n10 9 3 2\n0 0 6 3\n5 5 2 2\n-1 -1 4 -1\n5 5 2 2\n-1 -1 2 3\n7 8 2 4\n0 0 0 5",
+            "output": "Yes\nNo\nNo\nYes\nNo\nYes\nNo"
+        }
+    ],
+    "note": "In the first test case, it is possible to add\n8\nroofing sheets as follows:\nIn the second test case, it is impossible to completely tile the roof:",
+    "tags": [
+        "constructive algorithms",
+        "math"
+    ],
+    "rating": "1200"
+}

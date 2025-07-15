@@ -1,0 +1,19 @@
+{
+    "statement": "You are given an array\na\nof\nn\nintegers. We define the\nbeauty\nof a number\nx\nto be the number of\n1\nbits in its binary representation. We define the beauty of an array to be the sum of beauties of the numbers it contains.\nIn one operation, you can select an index\ni\n (1≤i≤n)\nand increase\nai\nby\n1\n.\nFind the maximum beauty of the array after doing at most\nk\noperations.",
+    "input_specification": "Each test contains multiple test cases. The first line contains the number of test cases\nt\n(\n1≤t≤5000\n). The description of the test cases follows.\nThe first line of each test case contains two integers\nn\nand\nk\n(\n1≤n≤5000\n,\n0≤k≤\n10\n18\n) — the length of the array and the maximal number of operations.\nThe second line of each test case contains\nn\nintegers\na\n1\n,\na\n2\n,…\na\nn\n(\n0≤\na\ni\n≤\n10\n9\n) —denoting the array\na\n.\nIt is guaranteed that the sum of\nn\nover all test cases does not exceed\n5000\n.",
+    "output_specification": "For each test case, output a single integer, the maximum beauty after at most\nk\noperations.",
+    "sample_tests": [
+        {
+            "input": "5\n5 2\n0 1 7 2 4\n5 3\n0 1 7 2 4\n1 1\n3\n3 0\n2 0 3\n1 100000000000\n0",
+            "output": "8\n9\n2\n3\n36"
+        }
+    ],
+    "note": "In the first test case,\na=[0,1,7,2,4]\n.\nIn the third test case,\na=[3]\n. Since you are not required to use exactly\nk\noperations, it is optimal to do none.",
+    "tags": [
+        "bitmasks",
+        "data structures",
+        "greedy",
+        "math"
+    ],
+    "rating": "1300"
+}

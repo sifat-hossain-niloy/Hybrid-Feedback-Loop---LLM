@@ -1,0 +1,17 @@
+{
+    "statement": "You are given two arrays of integers\na\n1\n,\na\n2\n,…,\na\nn\nand\nb\n1\n,\nb\n2\n,…,\nb\nn\n. It is guaranteed that each integer from\n1\nto\n2⋅n\nappears in exactly one of the arrays.\nYou need to perform a certain number of operations (possibly zero) so that both of the following conditions are satisfied:\nFor each\n1≤i<n\n, it holds that\na\ni\n<\na\ni+1\nand\nb\ni\n<\nb\ni+1\n.\nFor each\n1≤i≤n\n, it holds that\na\ni\n<\nb\ni\n.\nDuring each operation, you can perform exactly one of the following three actions:\nChoose an index\n1≤i<n\nand swap the values\na\ni\nand\na\ni+1\n.\nChoose an index\n1≤i<n\nand swap the values\nb\ni\nand\nb\ni+1\n.\nChoose an index\n1≤i≤n\nand swap the values\na\ni\nand\nb\ni\n.\nYou do not need to minimize the number of operations, but the total number must not exceed\n1709\n. Find any sequence of operations that satisfies both conditions.",
+    "input_specification": "Each test consists of multiple test cases. The first line contains a single integer\nt\n(\n1≤t≤100\n) — the number of test cases. The description of the test cases follows.\nThe first line of each test case contains a single integer\nn\n(\n1≤n≤40\n) — the length of the arrays\na\nand\nb\n.\nThe second line of each test case contains\nn\nintegers\na\n1\n,\na\n2\n,…,\na\nn\n(\n1≤\na\ni\n≤2⋅n\n).\nThe third line of each test case contains\nn\nintegers\nb\n1\n,\nb\n2\n,…,\nb\nn\n(\n1≤\nb\ni\n≤2⋅n\n).\nIt is guaranteed that each integer from\n1\nto\n2⋅n\nappears either in array\na\nor in array\nb\n.",
+    "output_specification": "For each test case, output the sequence of operations.\nIn the first line for each test case, output the number of operations\nk\n. Note that\n0≤k≤1709\n.\nIn the following\nk\nlines for each test case, output the operations themselves:\nIt can be shown that under the given constraints, a solution always exists.",
+    "sample_tests": [
+        {
+            "input": "6\n1\n1\n2\n1\n2\n1\n2\n1 3\n4 2\n2\n1 4\n3 2\n3\n6 5 4\n3 2 1\n3\n5 3 4\n2 6 1",
+            "output": "0\n1\n3 1\n1\n2 1\n1\n3 2\n9\n3 1\n3 2\n3 3\n1 1\n2 1\n2 2\n1 2\n1 1\n2 1\n6\n2 2\n1 1\n1 2\n2 1\n3 1\n3 2"
+        }
+    ],
+    "note": "In the first test case,\na\n1\n<\nb\n1\n, so no operations need to be applied.\nIn the second test case,\na\n1\n>\nb\n1\n. After applying the operation, these values will be swapped.\nIn the third test case, after applying the operation,\na=[1,3]\nand\nb=[2,4]\n.\nIn the fourth test case, after applying the operation,\na=[1,2]\nand\nb=[3,4]\n.",
+    "tags": [
+        "implementation",
+        "sortings"
+    ],
+    "rating": "1300"
+}

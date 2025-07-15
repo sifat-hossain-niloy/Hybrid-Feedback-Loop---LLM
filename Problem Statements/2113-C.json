@@ -1,0 +1,18 @@
+{
+    "statement": "The boy Smilo is playing Minecraft! To prepare for the battle with the dragon, he needs a lot of golden apples, and for that, he requires a lot of gold. Therefore, Smilo goes to the mine.\nThe mine is a rectangular grid of size\nn×m\n, where each cell can be either gold ore, stone, or an empty cell. Smilo can blow up dynamite in any empty cell. When dynamite explodes in an empty cell with coordinates\n(x,y)\n, all cells within a square of side\n2k+1\ncentered at cell\n(x,y)\nbecome empty. If gold ore was located strictly inside this square (not on the boundary), it disappears. However, if the gold ore was on the boundary of this square, Smilo collects that gold.\nDynamite can only be detonated inside the mine, but the explosion square can extend beyond the mine's boundaries.\nDetermine the maximum amount of gold that Smilo can collect.",
+    "input_specification": "Each test contains multiple test cases. The first line contains the number of test cases\nt\n(\n1≤t≤\n10\n4\n). The description of the test cases follows.\nThe first line of each test case contains three integers\nn\n,\nm\n, and\nk\n(\n1≤n,m,k≤500\n) — the number of rows, columns, and the explosion parameter\nk\n, respectively.\nEach of the following\nn\nlines contains\nm\ncharacters, each of which is equal to '.', '#', or 'g', where '.' — is an empty cell, '#' — is stone, 'g' — is gold. It is guaranteed that at least one of the cells is empty.\nIt is guaranteed that the sum\nn⋅m\nacross all test cases does not exceed\n2.5⋅\n10\n5\n.",
+    "output_specification": "For each test case, output a single integer — the maximum amount of gold that can be obtained.",
+    "sample_tests": [
+        {
+            "input": "3\n2 3 1\n#.#\ng.g\n2 3 2\n#.#\ng.g\n3 4 2\n.gg.\ng..#\ng##.",
+            "output": "2\n0\n4"
+        }
+    ],
+    "note": "In the first test case, Smilo can detonate the dynamite in any empty cell and obtain\n2\ngold:\nIn the second test case, no matter what Smilo does, he will not be able to obtain any gold:\nIn the third test case, it is possible to detonate the dynamite in the bottom right corner to obtain\n2\ngold, and then make another explosion one cell to the left to obtain the remaining\n2\ngold:",
+    "tags": [
+        "brute force",
+        "constructive algorithms",
+        "greedy"
+    ],
+    "rating": "1700"
+}
