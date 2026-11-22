@@ -1,0 +1,22 @@
+{
+    "statement": "Monsters are approaching the city, and to protect it, Akito must create a protective field around the city. As everyone knows, protective fields come in various levels. Akito has chosen the field of level\n𝑛\n. To construct the field, a special phrase is required, which is the\n𝑛\n-th row of the Great Magical Triangle, represented as a two-dimensional array. We will call this array\n𝑇\n.\nThe triangle is defined as follows:\nIn the\n𝑖\n-th row, there are\n𝑖\nintegers.\nThe single integer in the first row is\n𝑘\n.\nLet the\n𝑗\n-th element of the\n𝑖\n-th row be denoted as\n𝑇\n𝑖,𝑗\n. Then\n𝑇\n𝑖,𝑗\n=\n⎧\n⎩\n⎨\n⎪\n⎪\n𝑇\n𝑖−1,𝑗−1\n⊕\n𝑇\n𝑖−1,𝑗\n,\n𝑇\n𝑖−1,𝑗\n,\n𝑇\n𝑖−1,𝑗−1\n,\nif 1<𝑗<𝑖\nif 𝑗=1\nif 𝑗=𝑖\n{\nwhere\n𝑎⊕𝑏\nis the bitwise exclusive \"OR\"(XOR) of the integers\n𝑎\nand\n𝑏\n.\nHelp Akito find the integers in the\n𝑛\n-th row of the infinite triangle before the monsters reach the city.",
+    "input_specification": "The first line contains the integer\n𝑡\n(\n1≤𝑡≤\n10\n4\n) — the number of test cases.\nIn the only line of each test case, there are two integers\n𝑛\nand\n𝑘\n(\n1≤𝑛≤\n10\n6\n, 1≤𝑘<\n2\n31\n) — the row index that Akito needs and the integer in the first row of the Great Magical Triangle, respectively.\nIt is guaranteed that the sum of\n𝑛\nacross all test cases does not exceed\n10\n6\n.",
+    "output_specification": "For each test case, output\n𝑛\nintegers — the elements of the\n𝑛\n-th row of the Great Magical Triangle.",
+    "sample_tests": [
+        {
+            "input": "5\n1 5\n2 10\n3 16\n9 1\n1 52",
+            "output": "5\n10 10\n16 0 16\n1 0 0 0 0 0 0 0 1\n52"
+        }
+    ],
+    "note": "In the first example, the first row of the Great Magical Triangle is\n[5]\nby definition.\nIn the second example,\n𝑇\n2,1\n=\n𝑇\n1,1\n=10\nand\n𝑇\n2,2\n=\n𝑇\n1,1\n=10\n.",
+    "tags": [
+        "2-sat",
+        "bitmasks",
+        "combinatorics",
+        "constructive algorithms",
+        "fft",
+        "math",
+        "number theory"
+    ],
+    "rating": "1700"
+}
